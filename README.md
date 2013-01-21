@@ -20,7 +20,7 @@ What this plugin does is let create and manage events in a very simple way. Also
 ## Installation
 
 1. Download the plugin and unzip it.
-2. Upload the folder simple-web-fonts/ to your /wp-content/plugins/ folder.
+2. Upload the folder simple-events/ to your /wp-content/plugins/ folder.
 3. Activate the plugin from your WordPress admin panel.
 4. Installation finished.
 
