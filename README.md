@@ -7,7 +7,7 @@ Tested up to: 3.5
 
 ## Description
 
-What this plugin does is let create and manage events in a very simple way.  
+What this plugin does is let create and manage events in a very simple way. Also comes with a custom event skin to style the events.  
 
 ## Included languages:
 
