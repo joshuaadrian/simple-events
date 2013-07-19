@@ -240,7 +240,7 @@
 	function cpt_icons() { ?>
 	    <style type="text/css" media="screen">
 	        #menu-posts-se_events .wp-menu-image {
-	            background: url(<?php echo SE_URL_PATH . '/images/calendar-list.png'; ?>) no-repeat 6px -17px !important;
+	            background: url(<?php echo SE_URL_PATH . '/assets/img/calendar-list.png'; ?>) no-repeat 6px -17px !important;
 	        }
 			#menu-posts-se_events:hover .wp-menu-image, #menu-posts-se_events.wp-has-current-submenu .wp-menu-image {
 	            background-position:6px 7px!important;

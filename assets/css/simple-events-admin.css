@@ -51,7 +51,7 @@
   color: #ccc;
   height: 24px;
   line-height: 24px;
-  background: url(../images/se-sprite.png) 0px 0px no-repeat;
+  background: url(../img/se-sprite.png) 0px 0px no-repeat;
 }
 .se_pagination li.se-active a {
   color: #8a8a8a;

@@ -10,28 +10,6 @@ Author URI: http://joshuaadrian.com
 */
 
 /************************************************************************/
-/* ERROR LOGGING
-/************************************************************************/
-
-/**
- *  Simple logging function that outputs to debug.log if enabled
- *  _log('Testing the error message logging');
- *	_log(array('it' => 'works'));
- */
-
-if (!function_exists('_log')) {
-  function _log( $message ) {
-    if( WP_DEBUG === true ){
-      if( is_array( $message ) || is_object( $message ) ){
-        error_log( print_r( $message, true ) );
-      } else {
-        error_log( $message );
-      }
-    }
-  }
-}
-
-/************************************************************************/
 /* DEFINE PLUGIN ID AND NICK
 /************************************************************************/
 $se_data;
@@ -58,9 +36,10 @@ if ( !function_exists( 'get_plugins' ) ) {
     require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 }
 if ( is_admin() ) {
-	global $se_data;
-    $se_data = get_plugin_data( SE_PATH . plugin_basename( dirname( __FILE__ ) ) . '.php', false, false );
+  $se_data = get_plugin_data( SE_PATH . plugin_basename( dirname( __FILE__ ) ) . '.php', false, false );
 }
+// PLUGIN OPTIONS
+$se_options = get_option('se_options');
 
 
 /************************************************************************/
@@ -129,7 +108,7 @@ function se_init() {
 
 // Add menu page
 function se_add_options_page() {
-	add_options_page( 'Simple Events', '<img class="menu_se" src="' . plugins_url( 'assets/images/simple-events.gif' , __FILE__ ) . '" alt="" />'.SE_PLUGINOPTIONS_NICK, 'manage_options', SE_PLUGINOPTIONS_ID, 'se_render_form' );
+	add_options_page( 'Simple Events', '<img class="menu_se" src="' . plugins_url( 'assets/img/simple-events.gif' , __FILE__ ) . '" alt="" />'.SE_PLUGINOPTIONS_NICK, 'manage_options', SE_PLUGINOPTIONS_ID, 'se_render_form' );
 }
 
 // ------------------------------------------------------------------------------
@@ -143,10 +122,9 @@ function se_add_options_page() {
 // Render the Plugin options form
 function se_render_form() {
 	global $se_data;
+	
 	?>
 	
-
-
 	<div class="wrap">
 
 	    <?php screen_icon(); ?>
@@ -294,7 +272,7 @@ function se_render_form() {
 		    <p class="submit"><input name="Submit" type="submit" value="<?php esc_attr_e('Update Settings'); ?>" class="button-primary" /></p>
 		</form>
 		<div class="credits">
-			<p><?php echo $se_data['Name']; ?> Plugin | Version <?php echo $se_data['Version']; ?> | <a href="<?php echo $se_data['PluginURI']; ?>">Plugin Website</a> | Author <a href="<?php echo $se_data['AuthorURI']; ?>"><?php echo $se_data['Author']; ?></a> | <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="position:relative; top:3px; margin-left:3px"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><a href="http://joshuaadrian.com" target="_blank" class="alignright"><img src="<?php echo plugins_url( 'assets/images/ja-logo.gif' , __FILE__ ); ?>" alt="Joshua Adrian" /></a></p>
+			<p><?php echo $se_data['Name']; ?> Plugin | Version <?php echo $se_data['Version']; ?> | <a href="<?php echo $se_data['PluginURI']; ?>">Plugin Website</a> | Author <a href="<?php echo $se_data['AuthorURI']; ?>"><?php echo $se_data['Author']; ?></a> | <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="position:relative; top:3px; margin-left:3px"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><a href="http://joshuaadrian.com" target="_blank" class="alignright"><img src="<?php echo plugins_url( 'assets/img/ja-logo.gif' , __FILE__ ); ?>" alt="Joshua Adrian" /></a></p>
 		</div>
 	</div>
 <?php
@@ -346,14 +324,14 @@ function se_plugin_skin_styles() {
 
 		$dependencies = array();
 
-		if ($skin_json['css']) {
+		if ($skin_json->css) {
 			wp_enqueue_style('se-skin-default', plugins_url('/assets/css/skins/'.$skin.'/'.$skin.'.css', __FILE__), false, '1.0.0');
 		}
-		if ($skin_json['js_dependencies']) {
-			array_push($dependencies, $skin_json['js_dependencies']);
+		if ($skin_json->js_dependencies) {
+			array_push($dependencies, $skin_json->js_dependencies);
 		}
-		if ($skin_json['js']) {
-			wp_enqueue_script('se-skin-default', plugins_url('/assets/css/skins/'.$skin.'/'.$skin.'.min.js', __FILE__), array($dependencies), '1.0.0', true);
+		if ($skin_json->js) {
+			wp_enqueue_script('se-skin-default', plugins_url('/assets/css/skins/'.$skin.'/'.$skin.'.min.js', __FILE__), $dependencies, '1.0.0', true);
 		}
 		
 	}
@@ -365,9 +343,12 @@ add_action('wp_enqueue_scripts', 'se_plugin_skin_styles');
 /* INCLUDES
 /************************************************************************/
 
-require SE_PATH . 'assets/inc/simple-events-custom-post-type.php';
-require SE_PATH . 'assets/inc/simple-events-metaboxes.php';
+if ( !isset($se_options['google_cal_id']) || empty($se_options['google_cal_id']) ) {
+	require SE_PATH . 'assets/inc/simple-events-custom-post-type.php';
+	require SE_PATH . 'assets/inc/simple-events-metaboxes.php';
+}
 require SE_PATH . 'assets/inc/simple-events-shortcodes.php';
+require SE_PATH . 'assets/inc/simple-events-widgets.php';
 require SE_PATH . 'assets/inc/simple-events-functions.php';
 
 ?>
