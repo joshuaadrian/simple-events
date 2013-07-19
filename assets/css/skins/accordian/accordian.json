@@ -1,0 +1,7 @@
+{
+  "name": "accordian",
+  "version": "1.0.0",
+  "css": true,
+  "js": true,
+  "js_dependencies": "jquery"
+}

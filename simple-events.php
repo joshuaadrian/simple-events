@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Simple Events
-Plugin URI: http://joshuaadrian.com/simple-events-plugin/
+Plugin URI: https://github.com/joshuaadrian/simple-events
 Description: Create, manage and place events easily with this plugin. Place them with shortcodes on pages, posts, and/or widgets.
 Author: Joshua Adrian
 Version: 0.5.0
@@ -34,7 +34,7 @@ if (!function_exists('_log')) {
 /************************************************************************/
 /* DEFINE PLUGIN ID AND NICK
 /************************************************************************/
-
+$se_data;
 // DEFINE PLUGIN BASE
 define( 'SE_PATH', plugin_dir_path(__FILE__) );
 // DEFINE PLUGIN URL
@@ -53,6 +53,15 @@ add_action( 'admin_init', 'se_init' );
 add_action( 'admin_menu', 'se_add_options_page' );
 // ADD LINK TO ADMIN
 add_filter( 'plugin_action_links', 'se_plugin_action_links', 10, 2 );
+// GET PLUGIN DATA
+if ( !function_exists( 'get_plugins' ) ) {
+    require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+}
+if ( is_admin() ) {
+	global $se_data;
+    $se_data = get_plugin_data( SE_PATH . plugin_basename( dirname( __FILE__ ) ) . '.php', false, false );
+}
+
 
 /************************************************************************/
 /* ADD LOCALIZATION FOLDER
@@ -88,9 +97,11 @@ function se_add_defaults() {
     if(($tmp['chk_default_options_db']=='1')||(!is_array($tmp))) {
 		delete_option('se_options'); // so we don't have to reset all the 'off' checkboxes too! (don't think this is needed but leave for now)
 		$arr = array(
-			"time_zone"              => "",
+			"google"                 => false,
+			"google_cal_id"          => "",
 			"skin"                   => "none",
-			"chk_default_options_db" => ""
+			"cal_view"               => "list",
+			"time_zone"              => "America/Chicago"
 		);
 		update_option('se_options', $arr);
 	}
@@ -118,7 +129,7 @@ function se_init() {
 
 // Add menu page
 function se_add_options_page() {
-	add_options_page( 'Simple Events', '<img class="menu_se" src="' . plugins_url( 'images/simple-events.gif' , __FILE__ ) . '" alt="" />'.SE_PLUGINOPTIONS_NICK, 'manage_options', SE_PLUGINOPTIONS_ID, 'se_render_form' );
+	add_options_page( 'Simple Events', '<img class="menu_se" src="' . plugins_url( 'assets/images/simple-events.gif' , __FILE__ ) . '" alt="" />'.SE_PLUGINOPTIONS_NICK, 'manage_options', SE_PLUGINOPTIONS_ID, 'se_render_form' );
 }
 
 // ------------------------------------------------------------------------------
@@ -130,7 +141,12 @@ function se_add_options_page() {
 // ------------------------------------------------------------------------------
 
 // Render the Plugin options form
-function se_render_form() { ?>
+function se_render_form() {
+	global $se_data;
+	?>
+	
+
+
 	<div class="wrap">
 
 	    <?php screen_icon(); ?>
@@ -154,10 +170,26 @@ function se_render_form() { ?>
 
 		    <ul class="se_content">
 		    	<li id="se-settings" class="se-active">
-		    		<div class="se-copy">
-						<h2>Global Plugin Settings</h2>
-					</div>
+					<h3>Google Calendar Settings</h3>
+					<table class="form-table">
+				    	<tr>
+							<th>
+					    		<label for="se_google">Use Google Calendar To Handle Events</label>
+					    	</th>
+					    	<td>
 
+							</td>
+						</tr>
+						<tr>
+							<th>
+					    		<label for="se_google_cal_id">Google Calendar ID</label>
+					    	</th>
+					    	<td>
+					    		<input type="text" name="se_options[google_cal_id]" value="<?php echo $options['google_cal_id']; ?>" id="google_cal_id" />
+							</td>
+						</tr>
+					</table>
+					<h3>Style Settings</h3>
 		    		<table class="form-table">
 				    	<tr>
 							<th>
@@ -167,7 +199,7 @@ function se_render_form() { ?>
 								<select name='se_options[skin]'>
 									<option value='none' <?php selected('none', $options['skin']); ?>>&mdash; None &mdash;</option>
 									<?php
-									if ($handle = opendir(SE_PATH . 'css/skins')) {
+									if ($handle = opendir(SE_PATH . 'assets/css/skins')) {
 									    while (false !== ($entry = readdir($handle))) {
 									    	if ($entry != "." && $entry != "..") { ?>
 									        	<option value='<?php echo $entry; ?>' <?php selected($entry, $options['skin']); ?>><?php echo ucfirst($entry); ?></option>
@@ -176,6 +208,17 @@ function se_render_form() { ?>
 									    closedir($handle);
 									}
 									?>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>
+					    		<label for="se_cal_view">Calendar View</label>
+					    	</th>
+					    	<td>
+								<select id="se_cal_view" name='se_options[cal_view]'>
+						        	<option value='list' <?php selected('list', $options['cal_view']); ?>>List</option>
+						        	<option value='calendar' <?php selected('calendar', $options['cal_view']); ?>>Calendar</option>
 								</select>
 							</td>
 						</tr>
@@ -251,7 +294,7 @@ function se_render_form() { ?>
 		    <p class="submit"><input name="Submit" type="submit" value="<?php esc_attr_e('Update Settings'); ?>" class="button-primary" /></p>
 		</form>
 		<div class="credits">
-			<p>Simple Events Plugin | Version 0.1.0 | <a href="http://www.joshuaadrian.com/simple-events-plugin/" target="_blank">Website</a> | Author <a href="http://joshuaadrian.com" target="_blank">Joshua Adrian</a> | <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="position:relative; top:3px; margin-left:3px"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><a href="http://joshuaadrian.com" target="_blank" class="alignright"><img src="<?php echo plugins_url( 'images/ja-logo.gif' , __FILE__ ); ?>" alt="Joshua Adrian" /></a></p>
+			<p><?php echo $se_data['Name']; ?> Plugin | Version <?php echo $se_data['Version']; ?> | <a href="<?php echo $se_data['PluginURI']; ?>">Plugin Website</a> | Author <a href="<?php echo $se_data['AuthorURI']; ?>"><?php echo $se_data['Author']; ?></a> | <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="position:relative; top:3px; margin-left:3px"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><a href="http://joshuaadrian.com" target="_blank" class="alignright"><img src="<?php echo plugins_url( 'assets/images/ja-logo.gif' , __FILE__ ); ?>" alt="Joshua Adrian" /></a></p>
 		</div>
 	</div>
 <?php
@@ -284,18 +327,9 @@ function se_plugin_action_links( $links, $file ) {
 /************************************************************************/
 /* IMPORT CSS AND JAVASCRIPT STYLES
 /************************************************************************/
-
 function se_plugin_enqueue() {
-  wp_enqueue_style('simple_events_css', plugins_url('/css/simple-events.css', __FILE__), false, '1.0.0');
-  wp_enqueue_style('jquery_ui_css', plugins_url('/css/smoothness/jquery-ui-1.9.1.custom.min.css', __FILE__), false, '1.9.1');
-  // wp_deregister_script('jquery');
-  // wp_register_script('jquery', plugins_url('/js/jquery-1.8.2.js', __FILE__), false, '1.8.2');
-  // wp_enqueue_script('jquery');
-  wp_deregister_script('jquery_ui');
-  wp_register_script('jquery_ui', plugins_url('/js/jquery-ui-1.9.1.custom.min.js', __FILE__), array('jquery'), '1.9.1');
-  wp_enqueue_script('jquery_ui');
-  wp_enqueue_script('jquery_ui_timepicker', plugins_url('/js/jquery.ui.timepicker.js', __FILE__), array('jquery', 'jquery_ui'), '1.0.0');
-  wp_enqueue_script('simple_events_scripts', plugins_url('/js/simple-events.min.js', __FILE__), array('jquery', 'jquery_ui'), '1.0.0');
+	wp_enqueue_style('simple_events_admin_css', plugins_url('/assets/css/simple-events-admin.css', __FILE__), false, '1.0.0');
+	wp_enqueue_script('simple_events_admin_js', plugins_url('/assets/js/simple-events-admin.min.js', __FILE__), array('jquery'), '1.0.0', true);
 }
 
 add_action('admin_enqueue_scripts', 'se_plugin_enqueue');
@@ -303,17 +337,25 @@ add_action('admin_enqueue_scripts', 'se_plugin_enqueue');
 function se_plugin_skin_styles() {
 	$skin = get_option('se_options');
 	$skin = $skin['skin'];
+	$skin_json = json_decode(file_get_contents(SE_PATH . 'assets/css/skins/'.$skin.'/'.$skin.'.json'));
 
-	if ($skin != 'none') {
-		wp_register_style('se-skin-default', plugins_url('/css/skins/'.$skin.'/style.css', __FILE__), false, '1.0.0');
-		wp_enqueue_style('se-skin-default');
-		//// Can't get the wp_script_is to return a value... Needs work
-		// if (wp_script_is('jquery', $list = 'queue')) {
-		// wp_deregister_script('jquery');
-		// wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js', true, '1.8.2', false);
-		// wp_enqueue_script('jquery');
-		// }
-		wp_enqueue_script('se-skin-default', plugins_url('/css/skins/'.$skin.'/app.min.js', __FILE__), array('jquery'), '1.0.0');
+	wp_enqueue_style('simple_events_admin_css', plugins_url('/assets/css/simple-events.css', __FILE__), false, '1.0.0');
+	wp_enqueue_script('simple_events_js', plugins_url('/assets/js/simple-events.min.js', __FILE__), array('jquery', 'jquery_ui'), '1.0.0', true);
+
+	if ( $skin != 'none' && $skin_json ) {
+
+		$dependencies = array();
+
+		if ($skin_json['css']) {
+			wp_enqueue_style('se-skin-default', plugins_url('/assets/css/skins/'.$skin.'/'.$skin.'.css', __FILE__), false, '1.0.0');
+		}
+		if ($skin_json['js_dependencies']) {
+			array_push($dependencies, $skin_json['js_dependencies']);
+		}
+		if ($skin_json['js']) {
+			wp_enqueue_script('se-skin-default', plugins_url('/assets/css/skins/'.$skin.'/'.$skin.'.min.js', __FILE__), array($dependencies), '1.0.0', true);
+		}
+		
 	}
 }
 
@@ -323,7 +365,9 @@ add_action('wp_enqueue_scripts', 'se_plugin_skin_styles');
 /* INCLUDES
 /************************************************************************/
 
-require SE_PATH . 'inc/simple-events-custom-post-type.inc';
-require SE_PATH . 'inc/simple-events-shortcodes.inc';
+require SE_PATH . 'assets/inc/simple-events-custom-post-type.php';
+require SE_PATH . 'assets/inc/simple-events-metaboxes.php';
+require SE_PATH . 'assets/inc/simple-events-shortcodes.php';
+require SE_PATH . 'assets/inc/simple-events-functions.php';
 
 ?>
