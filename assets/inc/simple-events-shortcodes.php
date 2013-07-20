@@ -34,13 +34,11 @@
 
 		if ( isset($se_options['google_cal_id']) && !empty($se_options['google_cal_id']) ) {
 
-			$feedURL = 'http://www.google.com/calendar/feeds/' . $se_options['google_cal_id'] . '/public/basic';
-    	$calFeed = simplexml_load_file($feedURL);
+			$google_cal_events = json_decode( file_get_contents( SE_PATH . 'assets/cache/google_calendar_events.txt' ) );
 
-    	foreach ($calFeed->entry as $entry) {
-	      $title = stripslashes($entry->title);
-	      $summary = stripslashes($entry->summary);
-	      $events_output .= '<li id="se-event-'.$i.'>' . $title . $summary . '</li>';
+    	foreach ($google_cal_events->items as $google_cal_event) {
+    		$start = isset($google_cal_event->start->dateTime) ? $google_cal_event->start->dateTime : $google_cal_event->start->date;
+	      $events_output .= '<li id="se-event-'.$i.'>' . $google_cal_event->summary . ' ' . $start . '</li>';
 	      $i++;
 	    }
 

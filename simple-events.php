@@ -76,11 +76,11 @@ function se_add_defaults() {
     if(($tmp['chk_default_options_db']=='1')||(!is_array($tmp))) {
 		delete_option('se_options'); // so we don't have to reset all the 'off' checkboxes too! (don't think this is needed but leave for now)
 		$arr = array(
-			"google"                 => false,
-			"google_cal_id"          => "",
-			"skin"                   => "none",
-			"cal_view"               => "list",
-			"time_zone"              => "America/Chicago"
+			"google_cal_id"      => "",
+			"google_cal_api_key" => "",
+			"skin"               => "none",
+			"cal_view"           => "list",
+			"time_zone"          => "America/Chicago"
 		);
 		update_option('se_options', $arr);
 	}
@@ -150,20 +150,20 @@ function se_render_form() {
 		    	<li id="se-settings" class="se-active">
 					<h3>Google Calendar Settings</h3>
 					<table class="form-table">
-				    	<tr>
-							<th>
-					    		<label for="se_google">Use Google Calendar To Handle Events</label>
-					    	</th>
-					    	<td>
-
-							</td>
-						</tr>
 						<tr>
 							<th>
 					    		<label for="se_google_cal_id">Google Calendar ID</label>
 					    	</th>
 					    	<td>
 					    		<input type="text" name="se_options[google_cal_id]" value="<?php echo $options['google_cal_id']; ?>" id="google_cal_id" />
+							</td>
+						</tr>
+						<tr>
+							<th>
+					    		<label for="se_google_cal_api_key">Google Calendar API Key</label>
+					    	</th>
+					    	<td>
+					    		<input type="text" name="se_options[google_cal_api_key]" value="<?php echo $options['google_cal_api_key']; ?>" id="google_cal_api_key" />
 							</td>
 						</tr>
 					</table>
@@ -346,6 +346,8 @@ add_action('wp_enqueue_scripts', 'se_plugin_skin_styles');
 if ( !isset($se_options['google_cal_id']) || empty($se_options['google_cal_id']) ) {
 	require SE_PATH . 'assets/inc/simple-events-custom-post-type.php';
 	require SE_PATH . 'assets/inc/simple-events-metaboxes.php';
+} else {
+	require SE_PATH . 'assets/inc/simple-events-google-calendar-cron.php';
 }
 require SE_PATH . 'assets/inc/simple-events-shortcodes.php';
 require SE_PATH . 'assets/inc/simple-events-widgets.php';

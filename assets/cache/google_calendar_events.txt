@@ -1,0 +1,1616 @@
+{
+ "kind": "calendar#events",
+ "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/M7teGlU2aFGFnFA7xDk7mH44rrU\"",
+ "summary": "joshua@joshuaadrian.com",
+ "updated": "2013-07-20T03:27:56.497Z",
+ "timeZone": "America/Chicago",
+ "accessRole": "reader",
+ "items": [
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI2NDA5MjgxNzQ2OTAwMA\"",
+   "id": "5rus78u4q7cdppa2ppdne30n3o",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=NXJ1czc4dTRxN2NkcHBhMnBwZG5lMzBuM28gam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-01-21T16:53:35.000Z",
+   "updated": "2010-01-21T16:53:37.469Z",
+   "summary": "Austin Trip",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-01-23T15:30:00-06:00"
+   },
+   "end": {
+    "dateTime": "2010-01-24T00:00:00-06:00"
+   },
+   "iCalUID": "5rus78u4q7cdppa2ppdne30n3o@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI2NDA5NDAwNTgyMzAwMA\"",
+   "id": "jell61deq4vl5ffvqc9dm628sc",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=amVsbDYxZGVxNHZsNWZmdnFjOWRtNjI4c2Mgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-01-21T16:45:21.000Z",
+   "updated": "2010-01-21T17:13:25.823Z",
+   "summary": "Website meeting with Joshua Klauck",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-01-24T17:00:00-06:00"
+   },
+   "end": {
+    "dateTime": "2010-01-24T19:00:00-06:00"
+   },
+   "iCalUID": "jell61deq4vl5ffvqc9dm628sc@google.com",
+   "sequence": 1
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI2NTg3NzIyNjY3NjAwMA\"",
+   "id": "2p9rguvtrtf6tmb1hgtu0u0ldk",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=MnA5cmd1dnRydGY2dG1iMWhndHUwdTBsZGsgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-01-21T16:44:40.000Z",
+   "updated": "2010-02-11T08:33:46.676Z",
+   "summary": "Lunch with David Villa at Pizza Luce",
+   "description": "Website Meeting",
+   "location": "Pizza Luce",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-01-25T12:30:00-06:00"
+   },
+   "end": {
+    "dateTime": "2010-01-25T14:00:00-06:00"
+   },
+   "iCalUID": "2p9rguvtrtf6tmb1hgtu0u0ldk@google.com",
+   "sequence": 1
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI2NzA4NjI0MjEzNTAwMA\"",
+   "id": "p4r0eo2ocupa11du5sfd0i6eg8",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=cDRyMGVvMm9jdXBhMTFkdTVzZmQwaTZlZzggam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-01-29T20:02:44.000Z",
+   "updated": "2010-02-25T08:24:02.135Z",
+   "summary": "MPLS.TV Meeting",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-02-11T19:00:00-06:00"
+   },
+   "end": {
+    "dateTime": "2010-02-11T22:00:00-06:00"
+   },
+   "iCalUID": "p4r0eo2ocupa11du5sfd0i6eg8@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI2NzA4NjI0MjE1NTAwMA\"",
+   "id": "noamog0336sa6hu0kvsq3kries",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=bm9hbW9nMDMzNnNhNmh1MGt2c3Eza3JpZXMgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-01-25T19:48:02.000Z",
+   "updated": "2010-02-25T08:24:02.155Z",
+   "summary": "Dinner with Kyle",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-01-27T18:00:00-06:00"
+   },
+   "end": {
+    "dateTime": "2010-01-27T20:00:00-06:00"
+   },
+   "iCalUID": "noamog0336sa6hu0kvsq3kries@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI2NzA4NjI0MjI2MjAwMA\"",
+   "id": "pur4ouhtcu1gbaiosv24ktctss",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=cHVyNG91aHRjdTFnYmFpb3N2MjRrdGN0c3Mgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-01-21T16:52:10.000Z",
+   "updated": "2010-02-25T08:24:02.262Z",
+   "summary": "Show at the Bedlam",
+   "location": "the Bedlam",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-01-28T18:00:00-06:00"
+   },
+   "end": {
+    "dateTime": "2010-01-29T00:00:00-06:00"
+   },
+   "iCalUID": "pur4ouhtcu1gbaiosv24ktctss@google.com",
+   "sequence": 1
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI2NzA4NjI0MjI4NzAwMA\"",
+   "id": "7930tnk1bjbca58evm23r6pb2k",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=NzkzMHRuazFiamJjYTU4ZXZtMjNyNnBiMmsgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-01-21T16:52:34.000Z",
+   "updated": "2010-02-25T08:24:02.287Z",
+   "summary": "Band Practice",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-01-26T20:30:00-06:00"
+   },
+   "end": {
+    "dateTime": "2010-01-26T22:00:00-06:00"
+   },
+   "iCalUID": "7930tnk1bjbca58evm23r6pb2k@google.com",
+   "sequence": 2
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI2NzA4NjI0MjMwNTAwMA\"",
+   "id": "d9275eq0cdrbmanmo0qqgq8hn4",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=ZDkyNzVlcTBjZHJibWFubW8wcXFncThobjQgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-01-29T20:01:22.000Z",
+   "updated": "2010-02-25T08:24:02.305Z",
+   "summary": "Lost Season Premier",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-02-02T18:00:00-06:00"
+   },
+   "end": {
+    "dateTime": "2010-02-02T22:00:00-06:00"
+   },
+   "iCalUID": "d9275eq0cdrbmanmo0qqgq8hn4@google.com",
+   "sequence": 1
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI2NzA4NjI0MjMyNTAwMA\"",
+   "id": "mk39fhcljqh2seied6upsgoubg",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=bWszOWZoY2xqcWgyc2VpZWQ2dXBzZ291Ymcgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-01-29T20:03:19.000Z",
+   "updated": "2010-02-25T08:24:02.325Z",
+   "summary": "Dawes at Triple Rock",
+   "location": "Triple Rock",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-02-12T21:00:00-06:00"
+   },
+   "end": {
+    "dateTime": "2010-02-13T00:00:00-06:00"
+   },
+   "iCalUID": "mk39fhcljqh2seied6upsgoubg@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI2NzA4NjI0MjM1MDAwMA\"",
+   "id": "qp79ev94ml8o61m5gf78oed28g",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=cXA3OWV2OTRtbDhvNjFtNWdmNzhvZWQyOGcgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-01-29T20:02:02.000Z",
+   "updated": "2010-02-25T08:24:02.350Z",
+   "summary": "Show at the Fine Line",
+   "location": "the Fine Line",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-02-10T21:00:00-06:00"
+   },
+   "end": {
+    "dateTime": "2010-02-11T00:00:00-06:00"
+   },
+   "iCalUID": "qp79ev94ml8o61m5gf78oed28g@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI2NzA4NjI0MjM4MDAwMA\"",
+   "id": "apbt4lpskas4hcihuem9tfvm7s",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=YXBidDRscHNrYXM0aGNpaHVlbTl0ZnZtN3Mgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-01-29T20:02:16.000Z",
+   "updated": "2010-02-25T08:24:02.380Z",
+   "summary": "Band Practice",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-02-09T20:30:00-06:00"
+   },
+   "end": {
+    "dateTime": "2010-02-09T22:00:00-06:00"
+   },
+   "iCalUID": "apbt4lpskas4hcihuem9tfvm7s@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI2ODY0NTc0ODQxNTAwMA\"",
+   "id": "10mla8gqkj8grn1lbs2kuqhv24",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=MTBtbGE4Z3Frajhncm4xbGJzMmt1cWh2MjQgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-01-29T20:03:48.000Z",
+   "updated": "2010-03-15T09:35:48.415Z",
+   "summary": "Valentines Day Date",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-02-14T20:00:00-06:00"
+   },
+   "end": {
+    "dateTime": "2010-02-14T23:00:00-06:00"
+   },
+   "iCalUID": "10mla8gqkj8grn1lbs2kuqhv24@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI3MjQ0OTA0NjEyMjAwMA\"",
+   "id": "ch9lvloge0jo6fo5tla6fr1bvg",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=Y2g5bHZsb2dlMGpvNmZvNXRsYTZmcjFidmcgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-03-31T13:56:01.000Z",
+   "updated": "2010-04-28T10:04:06.122Z",
+   "summary": "Story of the Sea",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-04-02T21:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2010-04-03T00:00:00-05:00"
+   },
+   "iCalUID": "ch9lvloge0jo6fo5tla6fr1bvg@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI3MjQ0OTA0NjE5NTAwMA\"",
+   "id": "582h0eg235gp949uufjinlnn24",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=NTgyaDBlZzIzNWdwOTQ5dXVmamlubG5uMjQgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-03-31T13:55:51.000Z",
+   "updated": "2010-04-28T10:04:06.195Z",
+   "summary": "Rocky Votolato",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-04-01T21:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2010-04-02T00:00:00-05:00"
+   },
+   "iCalUID": "582h0eg235gp949uufjinlnn24@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI3MzkwNjY3NTAxMDAwMA\"",
+   "id": "okiaatlliu39ttgt2boois0e80",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=b2tpYWF0bGxpdTM5dHRndDJib29pczBlODAgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-03-31T13:57:38.000Z",
+   "updated": "2010-05-15T06:57:55.010Z",
+   "summary": "Dawes",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-06-06T21:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2010-06-07T00:00:00-05:00"
+   },
+   "iCalUID": "okiaatlliu39ttgt2boois0e80@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI3MzkwNjY3NTA1NTAwMA\"",
+   "id": "tarqk23menc6gqlu2sa0libfrk",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=dGFycWsyM21lbmM2Z3FsdTJzYTBsaWJmcmsgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-03-31T13:56:28.000Z",
+   "updated": "2010-05-15T06:57:55.055Z",
+   "summary": "Bethany's Birthday",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "date": "2010-04-19"
+   },
+   "end": {
+    "date": "2010-04-21"
+   },
+   "iCalUID": "tarqk23menc6gqlu2sa0libfrk@google.com",
+   "sequence": 1
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI3MzkwNjY3NTA3NzAwMA\"",
+   "id": "s5kesik3vp0a5rja5f4a7dbfi8",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=czVrZXNpazN2cDBhNXJqYTVmNGE3ZGJmaTggam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-03-31T13:58:54.000Z",
+   "updated": "2010-05-15T06:57:55.077Z",
+   "summary": "Memory Lanes Show",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-05-30T16:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2010-05-30T22:00:00-05:00"
+   },
+   "iCalUID": "s5kesik3vp0a5rja5f4a7dbfi8@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI3MzkwNjY3NTEwNjAwMA\"",
+   "id": "fmtrndhqr8amt7d54r0cs7qdfo",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=Zm10cm5kaHFyOGFtdDdkNTRyMGNzN3FkZm8gam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-03-31T13:58:37.000Z",
+   "updated": "2010-05-15T06:57:55.106Z",
+   "summary": "501 Show",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-05-26T21:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2010-05-26T22:00:00-05:00"
+   },
+   "iCalUID": "fmtrndhqr8amt7d54r0cs7qdfo@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI3MzkwNjY3NTE0NTAwMA\"",
+   "id": "nlt1s09onmk29vspu4u8ue01g4",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=bmx0MXMwOW9ubWsyOXZzcHU0dTh1ZTAxZzQgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-03-31T13:58:27.000Z",
+   "updated": "2010-05-15T06:57:55.145Z",
+   "summary": "501 Show",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-05-19T21:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2010-05-19T22:00:00-05:00"
+   },
+   "iCalUID": "nlt1s09onmk29vspu4u8ue01g4@google.com",
+   "sequence": 1
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI3MzkwNjY3NTE2NTAwMA\"",
+   "id": "orm2vliuo6rb3bd9chr7cnt2o0",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=b3JtMnZsaXVvNnJiM2JkOWNocjdjbnQybzAgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-03-31T13:58:10.000Z",
+   "updated": "2010-05-15T06:57:55.165Z",
+   "summary": "501 Show",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-05-05T21:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2010-05-05T22:00:00-05:00"
+   },
+   "iCalUID": "orm2vliuo6rb3bd9chr7cnt2o0@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI3MzkwNjY3NTE4NTAwMA\"",
+   "id": "qf0ctta8thssbfbvnuh4mmaa60",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=cWYwY3R0YTh0aHNzYmZidm51aDRtbWFhNjAgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-03-31T13:58:18.000Z",
+   "updated": "2010-05-15T06:57:55.185Z",
+   "summary": "501 Show",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-05-12T21:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2010-05-12T22:00:00-05:00"
+   },
+   "iCalUID": "qf0ctta8thssbfbvnuh4mmaa60@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTI3ODU4MTQyMjk0ODAwMA\"",
+   "id": "6bgdicpmthq6t4m44g5q7q3vlg",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=NmJnZGljcG10aHE2dDRtNDRnNXE3cTN2bGcgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2010-06-21T15:34:07.000Z",
+   "updated": "2010-07-08T09:30:22.948Z",
+   "summary": "MIA Bike Night",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2010-07-15T17:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2010-07-15T18:00:00-05:00"
+   },
+   "iCalUID": "6bgdicpmthq6t4m44g5q7q3vlg@google.com",
+   "sequence": 1
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMTM3NTg2MDc1NTAwMA\"",
+   "id": "_6go34da184pkaba668o4ab9k7533gb9p60ok2b9h70o3ad9k8osk4ci568",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzZnbzM0ZGExODRwa2FiYTY2OG80YWI5azc1MzNnYjlwNjBvazJiOWg3MG8zYWQ5azhvc2s0Y2k1Njggam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-03-20T01:59:04.000Z",
+   "updated": "2011-03-29T05:17:40.755Z",
+   "summary": "Small brown bike",
+   "location": "Chicago",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-05-14T21:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-05-14T22:00:00-05:00"
+   },
+   "iCalUID": "4025AA3E-F20E-49F8-901A-180554F9B2E2",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMTM3NTg2MDgzMTAwMA\"",
+   "id": "_6ss38h1n6sq44b9j6123gb9k84sjib9o74s3aba46os42chn610k2dhm6c",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzZzczM4aDFuNnNxNDRiOWo2MTIzZ2I5azg0c2ppYjlvNzRzM2FiYTQ2b3M0MmNobjYxMGsyZGhtNmMgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-03-20T01:51:15.000Z",
+   "updated": "2011-03-29T05:17:40.831Z",
+   "summary": "Tattoo appointment",
+   "location": "Uptown tattoo",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-05-07T17:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-05-07T21:00:00-05:00"
+   },
+   "iCalUID": "784D774B-30D8-4A99-8985-D68A270AA663",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMTM3NTg2MDg5MjAwMA\"",
+   "id": "_6sp3adhi60ok6ba26d336b9k750k4ba284pj0b9n750jigph88s34c1h6g",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzZzcDNhZGhpNjBvazZiYTI2ZDMzNmI5azc1MGs0YmEyODRwajBiOW43NTBqaWdwaDg4czM0YzFoNmcgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-03-20T01:52:40.000Z",
+   "updated": "2011-03-29T05:17:40.892Z",
+   "summary": "Captured by robots",
+   "location": "T rock",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-05-11T20:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-05-11T23:00:00-05:00"
+   },
+   "iCalUID": "7256201C-B3F3-49AB-BA30-79A9C1B82014",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMTM3NTg2MDk1NzAwMA\"",
+   "id": "_68p3ghi38go48b9l74ojib9k74o3iba26gr44ba46p144e1h6cr3cd9k70",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzY4cDNnaGkzOGdvNDhiOWw3NG9qaWI5azc0bzNpYmEyNmdyNDRiYTQ2cDE0NGUxaDZjcjNjZDlrNzAgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-03-20T01:58:11.000Z",
+   "updated": "2011-03-29T05:17:40.957Z",
+   "summary": "Man man",
+   "location": "First ave",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-05-23T21:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-05-23T22:00:00-05:00"
+   },
+   "iCalUID": "228FCD0D-5919-4909-B46B-D6BB81366548",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMTM3NTg2MTAxNzAwMA\"",
+   "id": "_74qk2ga3710j8b9l8p2k6b9k6h1jcba26sq34b9o8co36e1p71238hhl8k",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=Xzc0cWsyZ2EzNzEwajhiOWw4cDJrNmI5azZoMWpjYmEyNnNxMzRiOW84Y28zNmUxcDcxMjM4aGhsOGsgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-03-20T01:56:25.000Z",
+   "updated": "2011-03-29T05:17:41.017Z",
+   "summary": "Tv on the radio",
+   "location": "First ave",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-04-24T21:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-04-24T22:00:00-05:00"
+   },
+   "iCalUID": "95AAC8A4-5FEC-44C6-B742-8C03898D4F5E",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMzEwMDA3NzE2OTAwMA\"",
+   "id": "plh3pd1j7dqi0qb4m1c3rqru88",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=cGxoM3BkMWo3ZHFpMHFiNG0xYzNycXJ1ODggam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-03-29T01:32:33.000Z",
+   "updated": "2011-04-18T04:14:37.169Z",
+   "summary": "Go Practice sailing and watch a race",
+   "description": "Josh, is in for this day!",
+   "creator": {
+    "email": "whiteonwhite@hotmail.com"
+   },
+   "organizer": {
+    "email": "106qp1sqgge9a1t54c4346ec34@group.calendar.google.com",
+    "displayName": "The Situation"
+   },
+   "start": {
+    "date": "2011-05-08"
+   },
+   "end": {
+    "date": "2011-05-09"
+   },
+   "transparency": "transparent",
+   "iCalUID": "plh3pd1j7dqi0qb4m1c3rqru88@google.com",
+   "sequence": 0,
+   "attendees": [
+    {
+     "email": "joshua@joshuaadrian.com",
+     "displayName": "Joshua Adrian",
+     "self": true,
+     "responseStatus": "needsAction"
+    }
+   ]
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMzEwMDA3ODgwOTAwMA\"",
+   "id": "vgk2qs80il2vtc5e5hm6s51q3g",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=dmdrMnFzODBpbDJ2dGM1ZTVobTZzNTFxM2cgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-03-29T01:38:16.000Z",
+   "updated": "2011-04-18T04:14:38.809Z",
+   "summary": "Race",
+   "description": "Josh is in!!!",
+   "creator": {
+    "email": "whiteonwhite@hotmail.com"
+   },
+   "organizer": {
+    "email": "106qp1sqgge9a1t54c4346ec34@group.calendar.google.com",
+    "displayName": "The Situation"
+   },
+   "start": {
+    "date": "2011-05-29"
+   },
+   "end": {
+    "date": "2011-05-30"
+   },
+   "transparency": "transparent",
+   "iCalUID": "vgk2qs80il2vtc5e5hm6s51q3g@google.com",
+   "sequence": 0,
+   "attendees": [
+    {
+     "email": "joshua@joshuaadrian.com",
+     "displayName": "Joshua Adrian",
+     "self": true,
+     "responseStatus": "needsAction"
+    }
+   ]
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMzEwMDA3OTAwNTAwMA\"",
+   "id": "ggbc8mm4p6bgsn963s6vl4boc0",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=Z2diYzhtbTRwNmJnc245NjNzNnZsNGJvYzAgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-03-29T01:34:07.000Z",
+   "updated": "2011-04-18T04:14:39.005Z",
+   "summary": "Our first Race?",
+   "description": "Josh is in!!!",
+   "creator": {
+    "email": "whiteonwhite@hotmail.com"
+   },
+   "organizer": {
+    "email": "106qp1sqgge9a1t54c4346ec34@group.calendar.google.com",
+    "displayName": "The Situation"
+   },
+   "start": {
+    "date": "2011-05-22"
+   },
+   "end": {
+    "date": "2011-05-23"
+   },
+   "transparency": "transparent",
+   "iCalUID": "ggbc8mm4p6bgsn963s6vl4boc0@google.com",
+   "sequence": 0,
+   "attendees": [
+    {
+     "email": "joshua@joshuaadrian.com",
+     "displayName": "Joshua Adrian",
+     "self": true,
+     "responseStatus": "needsAction"
+    }
+   ]
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMzcwNjg1NzcxODAwMA\"",
+   "id": "_6sqj8h1k64rjcba460pk2b9k68ok2ba26sqk4b9l6h1j2gph8oq34h1l70",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzZzcWo4aDFrNjRyamNiYTQ2MHBrMmI5azY4b2syYmEyNnNxazRiOWw2aDFqMmdwaDhvcTM0aDFsNzAgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-04-10T06:19:20.000Z",
+   "updated": "2011-04-25T04:47:37.718Z",
+   "summary": "Potluck",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-04-13T19:30:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-04-13T22:30:00-05:00"
+   },
+   "iCalUID": "754D4176-D03A-421A-B75B-54C1C1F42D58",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMzcwNjg1NzgzNTAwMA\"",
+   "id": "_8l338e2474o32b9i8h23ab9k8l130ba270sj8ba58oo3gg9m8d1j8c9n6o",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzhsMzM4ZTI0NzRvMzJiOWk4aDIzYWI5azhsMTMwYmEyNzBzajhiYTU4b28zZ2c5bThkMWo4YzluNm8gam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-04-10T06:20:15.000Z",
+   "updated": "2011-04-25T04:47:37.835Z",
+   "summary": "Jena b day",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-04-12T19:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-04-12T23:00:00-05:00"
+   },
+   "iCalUID": "EF48D901-2DD5-4EB0-B894-EF08A6CC4176",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMzcwNjg1NzkzNDAwMA\"",
+   "id": "_74o32di1711jib9p6cpkab9k70p3cb9p6oo4cb9h8d1jadi38op3idhk74",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=Xzc0bzMyZGkxNzExamliOXA2Y3BrYWI5azcwcDNjYjlwNm9vNGNiOWg4ZDFqYWRpMzhvcDNpZGhrNzQgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-04-10T15:12:46.000Z",
+   "updated": "2011-04-25T04:47:37.934Z",
+   "summary": "Big business",
+   "location": "T rock",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-07-29T21:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-07-30T01:00:00-05:00"
+   },
+   "iCalUID": "9016A8C9-933E-4826-960F-1CC56CF29649",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMzcwNjg1ODA1ODAwMA\"",
+   "id": "_852k8gho8p344b9h8h23gb9k8p23cba18kq30b9o88sjecpn8d2j6g9l6k",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=Xzg1Mms4Z2hvOHAzNDRiOWg4aDIzZ2I5azhwMjNjYmExOGtxMzBiOW84OHNqZWNwbjhkMmo2ZzlsNmsgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-04-15T17:16:50.000Z",
+   "updated": "2011-04-25T04:47:38.058Z",
+   "summary": "Extreme noise flea market",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-05-21T10:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-05-21T14:00:00-05:00"
+   },
+   "iCalUID": "AEDB8FFB-1DD8-4FD6-AE40-8B9737CE3A55",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMzcwNjg1ODE1NDAwMA\"",
+   "id": "_6l2j8e1h68pj0ba27523ib9k6crk8b9p6gqj0b9j6cqk4chj69346cq674",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzZsMmo4ZTFoNjhwajBiYTI3NTIzaWI5azZjcms4YjlwNmdxajBiOWo2Y3FrNGNoajY5MzQ2Y3E2NzQgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-04-10T06:15:59.000Z",
+   "updated": "2011-04-25T04:47:38.154Z",
+   "summary": "Date with Sally",
+   "location": "Chatterbox",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-04-11T20:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-04-11T21:00:00-05:00"
+   },
+   "iCalUID": "5E481230-B9D9-437D-9450-335B232FC3F9",
+   "sequence": 1
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMzcwNjg1ODI0OTAwMA\"",
+   "id": "_6t23ac1m88q3cb9j8os3gb9k8p0j0ba28h332b9i88qkcca370sjcd2568",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzZ0MjNhYzFtODhxM2NiOWo4b3MzZ2I5azhwMGowYmEyOGgzMzJiOWk4OHFrY2NhMzcwc2pjZDI1Njggam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-04-10T15:45:53.000Z",
+   "updated": "2011-04-25T04:47:38.249Z",
+   "summary": "Jen n Matties wedding",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-06-18T11:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-06-19T12:00:00-05:00"
+   },
+   "iCalUID": "7D506B46-3F88-4FA0-BDF1-2B5F1C8964E2",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMzcwNjg1ODM2NjAwMA\"",
+   "id": "_88q3gea48p0kcb9j6kpjcb9k8go3cba27114cba66h1k6di588rk2hhl60",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=Xzg4cTNnZWE0OHAwa2NiOWo2a3BqY2I5azhnbzNjYmEyNzExNGNiYTY2aDFrNmRpNTg4cmsyaGhsNjAgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-04-10T06:21:34.000Z",
+   "updated": "2011-04-25T04:47:38.366Z",
+   "summary": "May day parade",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "date": "2011-05-01"
+   },
+   "end": {
+    "date": "2011-05-02"
+   },
+   "iCalUID": "B489DFAF-3536-4D06-B8BF-F4CC6EB7AF50",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMzcwNjg1ODQ3NjAwMA\"",
+   "id": "_8ksjch9g84pj8b9j7123ab9k8d1j4ba28ks4ab9n6gr3cc1o7133gcph70",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=Xzhrc2pjaDlnODRwajhiOWo3MTIzYWI5azhkMWo0YmEyOGtzNGFiOW42Z3IzY2MxbzcxMzNnY3BoNzAgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-04-10T15:32:59.000Z",
+   "updated": "2011-04-25T04:47:38.476Z",
+   "summary": "Small brown bike",
+   "location": "Chicago",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-05-14T07:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-05-16T12:00:00-05:00"
+   },
+   "iCalUID": "E96E0A34-38D5-4CC2-BE8E-7466088F8318",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMzcwNjg1ODU3NzAwMA\"",
+   "id": "_6ksj8d1n652j6b9p8523eb9k8d0k6b9o8h1k4b9k6co36dhh6d130dhm8g",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzZrc2o4ZDFuNjUyajZiOXA4NTIzZWI5azhkMGs2YjlvOGgxazRiOWs2Y28zNmRoaDZkMTMwZGhtOGcgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-04-10T06:17:05.000Z",
+   "updated": "2011-04-25T04:47:38.577Z",
+   "summary": "Brett b day",
+   "location": "White sands",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-04-16T20:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-04-17T02:00:00-05:00"
+   },
+   "iCalUID": "594471E3-9AD7-4CAC-8DCB-4303613B066D",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMwMzcwNjg1ODY4MTAwMA\"",
+   "id": "_8h33icq360sj4b9j6t23ib9k711k6ba16sp3gba1890jih238cs38d9g8g",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzhoMzNpY3EzNjBzajRiOWo2dDIzaWI5azcxMWs2YmExNnNwM2diYTE4OTBqaWgyMzhjczM4ZDlnOGcgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-04-10T06:15:18.000Z",
+   "updated": "2011-04-25T04:47:38.681Z",
+   "summary": "Doctor appt",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-04-11T15:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-04-11T17:00:00-05:00"
+   },
+   "iCalUID": "DF93C092-37D9-48CC-A728-ABA9DCC8450D",
+   "sequence": 1
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMxMzAwNTY5ODAwMDAwMA\"",
+   "id": "_70qkacq564rjeba68cs3cb9k70pjeba16d2j2ba26kp3eh9k6kp32ca46o",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzcwcWthY3E1NjRyamViYTY4Y3MzY2I5azcwcGplYmExNmQyajJiYTI2a3AzZWg5azZrcDMyY2E0Nm8gam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-08-10T19:48:18.000Z",
+   "updated": "2011-08-10T19:48:18.000Z",
+   "summary": "Doctor Appt",
+   "location": "701 park ave p7",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-08-16T09:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-08-16T12:00:00-05:00"
+   },
+   "iCalUID": "85E3E177-FC86-4837-A3E1-B527E45211D6",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMxMzAwNTc2NzAwMDAwMA\"",
+   "id": "_6ssk8dhh6114aba3890j8b9k85236b9o70r38ba388r32e9i6ksk4ga688",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzZzc2s4ZGhoNjExNGFiYTM4OTBqOGI5azg1MjM2YjlvNzByMzhiYTM4OHIzMmU5aTZrc2s0Z2E2ODggam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-08-10T19:49:27.000Z",
+   "updated": "2011-08-10T19:49:27.000Z",
+   "summary": "Dakota fence",
+   "location": "Home",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-08-17T17:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-08-17T19:00:00-05:00"
+   },
+   "iCalUID": "79D610BE-CBA4-4AD3-8864-CB619259BAFB",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMxMzAwNTg0MTAwMDAwMA\"",
+   "id": "_8h0j0dhg64sk4b9h64ojgb9k612j2ba28d0jab9p6t0k6cho71336ca56o",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzhoMGowZGhnNjRzazRiOWg2NG9qZ2I5azYxMmoyYmEyOGQwamFiOXA2dDBrNmNobzcxMzM2Y2E1Nm8gam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-08-10T19:50:41.000Z",
+   "updated": "2011-08-10T19:50:41.000Z",
+   "summary": "Tc fence",
+   "location": "Home",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-08-11T17:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-08-11T19:00:00-05:00"
+   },
+   "iCalUID": "DA06019B-1118-40E1-BCA5-97AC288F31E6",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMxMzAwNTkzMDAwMDAwMA\"",
+   "id": "_6p0jcghh70ojib9i6gq3ab9k64p3eba18crj2b9j6p132e1l6sqj6ha16k",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzZwMGpjZ2hoNzBvamliOWk2Z3EzYWI5azY0cDNlYmExOGNyajJiOWo2cDEzMmUxbDZzcWo2aGExNmsgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-08-10T19:52:10.000Z",
+   "updated": "2011-08-10T19:52:10.000Z",
+   "summary": "Handsome review with Kent ",
+   "location": "Olson",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-08-12T13:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-08-12T15:00:00-05:00"
+   },
+   "iCalUID": "6A6B1819-2445-4127-AC71-36B185753EA5",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMxMzAxNjg1NDAwMDAwMA\"",
+   "id": "_6kp4ah9h6934cba56csk8b9k8l330b9p6gs42ba4752k4dq288rjgcpl74",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzZrcDRhaDloNjkzNGNiYTU2Y3NrOGI5azhsMzMwYjlwNmdzNDJiYTQ3NTJrNGRxMjg4cmpnY3BsNzRfMjAxMTA0MTRUMjMwMDAwWiBqb3NodWFAam9zaHVhYWRyaWFuLmNvbQ",
+   "created": "2011-04-10T06:18:44.000Z",
+   "updated": "2011-08-10T22:54:14.000Z",
+   "summary": "Band Practice",
+   "location": "Eagan",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-04-14T18:00:00-05:00",
+    "timeZone": "America/Chicago"
+   },
+   "end": {
+    "dateTime": "2011-04-14T22:00:00-05:00",
+    "timeZone": "America/Chicago"
+   },
+   "recurrence": [
+    "RRULE:FREQ=WEEKLY;UNTIL=20110811T225959Z",
+    "EXDATE;TZID=America/Chicago:20110414T180000"
+   ],
+   "iCalUID": "52EE12FF-E39D-4EF0-948A-D9EB7BB78359",
+   "sequence": 2
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMxMzA5NzA5NzAwMDAwMA\"",
+   "id": "_712k8gpn6oq3ab9j6533ab9k8l14cba174r48ba18kok8cq484ok6c228o",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzcxMms4Z3BuNm9xM2FiOWo2NTMzYWI5azhsMTRjYmExNzRyNDhiYTE4a29rOGNxNDg0b2s2YzIyOG8gam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-08-11T21:11:37.000Z",
+   "updated": "2011-08-11T21:11:37.000Z",
+   "summary": "Tony Hawk",
+   "location": "Mayday Cafe",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-08-14T10:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-08-14T11:00:00-05:00"
+   },
+   "iCalUID": "8EDC7645-31F5-4EBF-A96D-AE1D3DA1C0BF",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMxMzEyMjA4NjAwMDAwMA\"",
+   "id": "_6l2k4dhj8oqk4ba68cokcb9k6534cb9p89148b9l6sqk2ca66d0j2dpl64",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzZsMms0ZGhqOG9xazRiYTY4Y29rY2I5azY1MzRjYjlwODkxNDhiOWw2c3FrMmNhNjZkMGoyZHBsNjQgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-08-12T04:08:06.000Z",
+   "updated": "2011-08-12T04:08:06.000Z",
+   "summary": "Bcw",
+   "location": "2001 First ave",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-08-12T17:30:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-08-12T18:30:00-05:00"
+   },
+   "iCalUID": "5EB63F5B-FC1F-41FF-9BBD-575A1F3A1751",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMxNDIwMjMyOTAwMDAwMA\"",
+   "id": "_60qjagpm70sjad9m74rj8ci670s3eh9m691jad9k6d1j0gpk8oqj0c1g60o30c1g60o30c1g60o30c1g60o30c1g60o30c1g60o30c0",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzYwcWphZ3BtNzBzamFkOW03NHJqOGNpNjcwczNlaDltNjkxamFkOWs2ZDFqMGdwazhvcWowYzFnNjBvMzBjMWc2MG8zMGMxZzYwbzMwYzFnNjBvMzBjMWc2MG8zMGMxZzYwbzMwYzAgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-08-24T13:36:08.000Z",
+   "updated": "2011-08-24T16:12:09.000Z",
+   "summary": "Joshua first day lunch ",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "matt@gokartlabs.com",
+    "displayName": "Matt Johnson"
+   },
+   "start": {
+    "dateTime": "2011-08-24T12:00:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-08-24T13:00:00-05:00"
+   },
+   "iCalUID": "055C6895569742F887E62C5543C0C4F500000000000000000000000000000000",
+   "sequence": 0,
+   "attendees": [
+    {
+     "email": "joshua@joshuaadrian.com",
+     "displayName": "Joshua Adrian",
+     "self": true,
+     "responseStatus": "accepted"
+    }
+   ],
+   "guestsCanInviteOthers": false,
+   "privateCopy": true
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTMyMDUwOTc3NTAwMDAwMA\"",
+   "id": "_6113ah1p64rk8b9j6t0k2b9k8d148ba28d2j0b9g6h2jad9l74q44gho88",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=XzYxMTNhaDFwNjRyazhiOWo2dDBrMmI5azhkMTQ4YmEyOGQyajBiOWc2aDJqYWQ5bDc0cTQ0Z2hvODggam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2011-08-11T21:10:49.000Z",
+   "updated": "2011-11-05T16:16:15.000Z",
+   "summary": "Yoga",
+   "location": "Lake Calhoun",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2011-11-05T10:30:00-05:00"
+   },
+   "end": {
+    "dateTime": "2011-11-05T11:30:00-05:00"
+   },
+   "iCalUID": "0B5D917D-37AA-4CBD-BCE0-04E55594BB8B",
+   "sequence": 1
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTM2NDIyMDU3MzQ5NDAwMA\"",
+   "id": "o8b96arfa90ir1q1mie82pajdc",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=bzhiOTZhcmZhOTBpcjFxMW1pZTgycGFqZGMgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2013-03-24T21:12:13.000Z",
+   "updated": "2013-03-25T14:09:33.494Z",
+   "summary": "Sat Ride Bitches!",
+   "description": "Hello fellow cyclists,\n\nThe time is upon us! The Gateway trail website claims it is plowed from St. Paul to Jamaca Ave. (which is where we turn east to Stillwater)\nHead out from my place at 10 AM. Go to Stillwater, eat lunch. Enjoy the ride home. Weather prediction is 45 above Zero! Get your bike tuned up and pack your saddle bag, we're going on a bike ride! WHooo Hoooo",
+   "location": "3445 Bloomington Ave MPLS to Stillwater via Gateway Trail",
+   "creator": {
+    "email": "brettmatthewbaker@gmail.com",
+    "displayName": "Brett Baker"
+   },
+   "organizer": {
+    "email": "brettmatthewbaker@gmail.com",
+    "displayName": "Brett Baker"
+   },
+   "start": {
+    "dateTime": "2013-03-30T09:30:00-05:00"
+   },
+   "end": {
+    "dateTime": "2013-03-30T15:00:00-05:00"
+   },
+   "iCalUID": "o8b96arfa90ir1q1mie82pajdc@google.com",
+   "sequence": 0,
+   "attendees": [
+    {
+     "email": "joshua@joshuaadrian.com",
+     "displayName": "Joshua Adrian",
+     "self": true,
+     "responseStatus": "needsAction"
+    }
+   ]
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTM3MjE3NjQyMTgyMzAwMA\"",
+   "id": "k37ca3m8klv30kmo4n2en5n6f4",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=azM3Y2EzbThrbHYzMGttbzRuMmVuNW42ZjQgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2013-06-25T16:07:01.000Z",
+   "updated": "2013-06-25T16:07:01.823Z",
+   "summary": "Test Event",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2013-06-29T12:30:00-05:00"
+   },
+   "end": {
+    "dateTime": "2013-06-29T13:30:00-05:00"
+   },
+   "iCalUID": "k37ca3m8klv30kmo4n2en5n6f4@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTM3MjE3NjQyODQ5NTAwMA\"",
+   "id": "f9p8tij5shfj5sqtubst2qdvro",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=ZjlwOHRpajVzaGZqNXNxdHVic3QycWR2cm8gam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2013-06-25T16:07:08.000Z",
+   "updated": "2013-06-25T16:07:08.495Z",
+   "summary": "Another Event",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2013-06-27T15:30:00-05:00"
+   },
+   "end": {
+    "dateTime": "2013-06-27T16:30:00-05:00"
+   },
+   "iCalUID": "f9p8tij5shfj5sqtubst2qdvro@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTM3MzYzOTUzNzcyNjAwMA\"",
+   "id": "lsu7um87hfo79k23bp434n097k",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=bHN1N3VtODdoZm83OWsyM2JwNDM0bjA5N2sgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2013-07-12T14:32:17.000Z",
+   "updated": "2013-07-12T14:32:17.726Z",
+   "summary": "New Calendar thing",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2013-07-13T09:30:00-05:00"
+   },
+   "end": {
+    "dateTime": "2013-07-13T10:30:00-05:00"
+   },
+   "iCalUID": "lsu7um87hfo79k23bp434n097k@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTM3MzY0Mjc3MDU1ODAwMA\"",
+   "id": "dpg2tm1npsk3c22ofia6sngp9c",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=ZHBnMnRtMW5wc2szYzIyb2ZpYTZzbmdwOWMgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2013-07-12T15:26:10.000Z",
+   "updated": "2013-07-12T15:26:10.558Z",
+   "summary": "New Event",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2013-07-17T08:30:00-05:00"
+   },
+   "end": {
+    "dateTime": "2013-07-17T09:30:00-05:00"
+   },
+   "iCalUID": "dpg2tm1npsk3c22ofia6sngp9c@google.com",
+   "sequence": 0
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTM3MzY0Mjc3NjAzNjAwMA\"",
+   "id": "0p639mmimpeb3fd0c2anq2in1g",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=MHA2MzltbWltcGViM2ZkMGMyYW5xMmluMWcgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2013-07-12T15:26:16.000Z",
+   "updated": "2013-07-12T15:26:16.036Z",
+   "summary": "Another thing a ma bob",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2013-07-20T07:30:00-05:00"
+   },
+   "end": {
+    "dateTime": "2013-07-20T08:30:00-05:00"
+   },
+   "iCalUID": "0p639mmimpeb3fd0c2anq2in1g@google.com",
+   "sequence": 0
+  }
+ ]
+}
