@@ -314,3 +314,7 @@
   /*must have*/
 
 }
+
+body .se-event-details p {
+  margin-bottom: 10px;
+}

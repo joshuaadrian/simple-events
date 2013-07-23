@@ -1,0 +1,77 @@
+
+
+July 20, 2013, 12:44 pm google calendar error json => {
+ "error": {
+  "errors": [
+   {
+    "domain": "global",
+    "reason": "badRequest",
+    "message": "Bad Request"
+   }
+  ],
+  "code": 400,
+  "message": "Bad Request"
+ }
+}
+ | rest call url =>  https://www.googleapis.com/calendar/v3/calendars/joshua@joshuaadrian.com/events?key=AIzaSyCZsGiYxZePx8nU2rlpfwV4cTOWoE8Nh9w&timeMin=2013-07-20T12:44:22+00:00
+
+July 20, 2013, 12:46 pm google calendar error json => {
+ "error": {
+  "errors": [
+   {
+    "domain": "global",
+    "reason": "badRequest",
+    "message": "Bad Request"
+   }
+  ],
+  "code": 400,
+  "message": "Bad Request"
+ }
+}
+ | rest call url =>  https://www.googleapis.com/calendar/v3/calendars/joshua@joshuaadrian.com/events?key=AIzaSyCZsGiYxZePx8nU2rlpfwV4cTOWoE8Nh9w&timeMin=2013-07-20T12:46:31+00:00
+
+July 20, 2013, 12:57 pm google calendar error json => {
+ "error": {
+  "errors": [
+   {
+    "domain": "global",
+    "reason": "badRequest",
+    "message": "Bad Request"
+   }
+  ],
+  "code": 400,
+  "message": "Bad Request"
+ }
+}
+ | rest call url =>  https://www.googleapis.com/calendar/v3/calendars/joshua@joshuaadrian.com/events?key=AIzaSyCZsGiYxZePx8nU2rlpfwV4cTOWoE8Nh9w&timeMin=2013-07-20T12:57:32+00:00
+
+July 20, 2013, 1:03 pm google calendar error json => {
+ "error": {
+  "errors": [
+   {
+    "domain": "global",
+    "reason": "badRequest",
+    "message": "Bad Request"
+   }
+  ],
+  "code": 400,
+  "message": "Bad Request"
+ }
+}
+ | rest call url =>  https://www.googleapis.com/calendar/v3/calendars/joshua@joshuaadrian.com/events?key=AIzaSyCZsGiYxZePx8nU2rlpfwV4cTOWoE8Nh9w&timeMin=2013-07-20T13:03:16+00:00
+
+July 20, 2013, 1:06 pm google calendar error json => {
+ "error": {
+  "errors": [
+   {
+    "domain": "global",
+    "reason": "badRequest",
+    "message": "Bad Request"
+   }
+  ],
+  "code": 400,
+  "message": "Bad Request"
+ }
+}
+ | rest call url =>  https://www.googleapis.com/calendar/v3/calendars/joshua@joshuaadrian.com/events?key=AIzaSyCZsGiYxZePx8nU2rlpfwV4cTOWoE8Nh9w&timeMin=2013-07-20T13:06:13+00:00
+

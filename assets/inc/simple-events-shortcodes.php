@@ -22,6 +22,7 @@
 	function se_events_list( $atts, $content = null ) {
 
 		global $se_options;
+		date_default_timezone_set('America/Chicago');
 
 		// GET SHORTCODE OPTIONS
 		extract( shortcode_atts( array(
@@ -34,11 +35,28 @@
 
 		if ( isset($se_options['google_cal_id']) && !empty($se_options['google_cal_id']) ) {
 
-			$google_cal_events = json_decode( file_get_contents( SE_PATH . 'assets/cache/google_calendar_events.txt' ) );
+			$google_cal_events = json_decode( file_get_contents( SE_PATH . 'assets/cache/google_calendar_events.json' ) );
+			$google_cal_events = array_reverse($google_cal_events->items);
 
-    	foreach ($google_cal_events->items as $google_cal_event) {
+    	foreach ( $google_cal_events as $google_cal_event) {
     		$start = isset($google_cal_event->start->dateTime) ? $google_cal_event->start->dateTime : $google_cal_event->start->date;
-	      $events_output .= '<li id="se-event-'.$i.'>' . $google_cal_event->summary . ' ' . $start . '</li>';
+    		$start_date = isset($google_cal_event->start->dateTime) ? date( 'Ymj', strtotime($google_cal_event->start->dateTime) ) : false;
+    		$end = isset($google_cal_event->end->dateTime) ? $google_cal_event->end->dateTime : $google_cal_event->end->date;
+	      $end_date = isset($google_cal_event->end->dateTime) ? date( 'Ymj', strtotime($google_cal_event->end->dateTime) ) : false;
+	      $location = isset($google_cal_event->location) ? $google_cal_event->location : 'No Event Location Specified';
+	      $description = isset($google_cal_event->description) ? $google_cal_event->description : 'No Event Desciption Specified';
+	      $events_output .= '<li id="se-event-'.$i.'>' . $google_cal_event->summary . ' ' . date( 'M j Y', strtotime($start) ) . '</li>';
+	      $events_output .= '<li id="se-event-'.$i.'" class="se-event"><div class="se-event-date-time-wrapper group"><div class="se-event-date-wrapper"><span class="se-start-date">' . date( 'M j Y', strtotime($start) ) . '</span>';
+	      if ( $end_date && $end_date != $start_date ) {
+					$events_output .= '-<span class="se-end-date">' . date( 'M j Y', strtotime($end) ) . '</span>';
+				}
+				$events_output .= '</div><div class="se-event-time-wrapper"><span class="se-start-time">Time: ' . date( 'g:i A', strtotime($start) ) . '</span>';
+				if ( isset( $end ) ) {
+					$events_output .= '-<span class="se-end-time">' . date( 'g:i A', strtotime($end) ) . '</span>';
+				}
+				$events_output .= '</div></div><a href="'.$google_cal_event->htmlLink.'" title="'.$google_cal_event->summary.'" class="se-event-title">'.$google_cal_event->summary.'</a><div class="se-event-details group"><p class="se-event-location"><span>Location:</span> '. $location . '</p><p>'.$description.'</p>';
+				$events_output .= '</div></li>';
+
 	      $i++;
 	    }
 

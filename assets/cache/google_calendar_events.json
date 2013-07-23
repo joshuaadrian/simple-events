@@ -1,0 +1,96 @@
+{
+ "kind": "calendar#events",
+ "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/JifnJL2C_j5P0afVX81Do_B6LFk\"",
+ "summary": "joshua@joshuaadrian.com",
+ "updated": "2013-07-23T01:48:28.475Z",
+ "timeZone": "America/Chicago",
+ "accessRole": "reader",
+ "items": [
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTM3NDMyNjU1MTI3MTAwMA\"",
+   "id": "0p639mmimpeb3fd0c2anq2in1g",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=MHA2MzltbWltcGViM2ZkMGMyYW5xMmluMWcgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2013-07-12T15:26:16.000Z",
+   "updated": "2013-07-20T13:22:31.271Z",
+   "summary": "Another thing a ma bob",
+   "description": "This is a description",
+   "location": "Bretts Place",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2013-10-20T07:30:00-05:00"
+   },
+   "end": {
+    "dateTime": "2013-10-20T08:30:00-05:00"
+   },
+   "iCalUID": "0p639mmimpeb3fd0c2anq2in1g@google.com",
+   "sequence": 1
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTM3NDMyNjg0NjEyNzAwMA\"",
+   "id": "k37ca3m8klv30kmo4n2en5n6f4",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=azM3Y2EzbThrbHYzMGttbzRuMmVuNW42ZjQgam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2013-06-25T16:07:01.000Z",
+   "updated": "2013-07-20T13:27:26.127Z",
+   "summary": "Test Event",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2013-09-29T12:30:00-05:00"
+   },
+   "end": {
+    "dateTime": "2013-09-29T13:30:00-05:00"
+   },
+   "iCalUID": "k37ca3m8klv30kmo4n2en5n6f4@google.com",
+   "sequence": 1
+  },
+  {
+   "kind": "calendar#event",
+   "etag": "\"hTTG_yZRNM6RHYgIq0uRTKezdKo/MTM3NDMzMzYzOTg0ODAwMA\"",
+   "id": "f9p8tij5shfj5sqtubst2qdvro",
+   "status": "confirmed",
+   "htmlLink": "https://www.google.com/calendar/event?eid=ZjlwOHRpajVzaGZqNXNxdHVic3QycWR2cm8gam9zaHVhQGpvc2h1YWFkcmlhbi5jb20",
+   "created": "2013-06-25T16:07:08.000Z",
+   "updated": "2013-07-20T15:20:39.848Z",
+   "summary": "Another Event",
+   "creator": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "organizer": {
+    "email": "joshua@joshuaadrian.com",
+    "displayName": "Joshua Adrian",
+    "self": true
+   },
+   "start": {
+    "dateTime": "2013-08-27T15:30:00-05:00"
+   },
+   "end": {
+    "dateTime": "2013-08-28T16:30:00-05:00"
+   },
+   "iCalUID": "f9p8tij5shfj5sqtubst2qdvro@google.com",
+   "sequence": 1
+  }
+ ]
+}

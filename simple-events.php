@@ -5,7 +5,7 @@ Plugin Name: Simple Events
 Plugin URI: https://github.com/joshuaadrian/simple-events
 Description: Create, manage and place events easily with this plugin. Place them with shortcodes on pages, posts, and/or widgets.
 Author: Joshua Adrian
-Version: 0.5.0
+Version: 0.6.0
 Author URI: http://joshuaadrian.com
 */
 
@@ -40,7 +40,10 @@ if ( is_admin() ) {
 }
 // PLUGIN OPTIONS
 $se_options = get_option('se_options');
-
+// LOAD CLASSES
+if ( !function_exists('markdown') ) {
+	require_once SE_PATH . 'assets/inc/libs/php-markdown/markdown.php';
+}
 
 /************************************************************************/
 /* ADD LOCALIZATION FOLDER
@@ -76,6 +79,7 @@ function se_add_defaults() {
     if(($tmp['chk_default_options_db']=='1')||(!is_array($tmp))) {
 		delete_option('se_options'); // so we don't have to reset all the 'off' checkboxes too! (don't think this is needed but leave for now)
 		$arr = array(
+			"google_cal"         => "",
 			"google_cal_id"      => "",
 			"google_cal_api_key" => "",
 			"skin"               => "none",
@@ -136,7 +140,7 @@ function se_render_form() {
 		    		<a href="#se-settings">Settings</a>
 		    	</li>
 		    	<li id="se-pagination-help">
-		    		<a href="#se-help">Help</a>
+		    		<a href="#se-help">Wiki</a>
 		    	</li>
 		    </ul>
 		    <form action="options.php" method="post" id="<?php echo SE_PLUGINOPTIONS_ID; ?>-options-form" name="<?php echo SE_PLUGINOPTIONS_ID; ?>-options-form">
@@ -150,6 +154,14 @@ function se_render_form() {
 		    	<li id="se-settings" class="se-active">
 					<h3>Google Calendar Settings</h3>
 					<table class="form-table">
+						<tr>
+							<th>
+					    		<label for="se_google_cal_id">Enable Google Calendar API</label>
+					    	</th>
+					    	<td>
+					    		<input type="checkbox" id="google_cal" name="se_options[google_cal]" value="1" <?php if ( isset($options['google_cal']) ) { checked( $options['google_cal'], 1 ); } ?> />
+							</td>
+						</tr>
 						<tr>
 							<th>
 					    		<label for="se_google_cal_id">Google Calendar ID</label>
@@ -225,47 +237,12 @@ function se_render_form() {
 		    	</li>
 		    	<li id="se-help">
 		    		<div class="se-copy">
-						<h2>Using the ShortCodes and Their Options</h2>
-
-						<h3>Usage</h3>
-						
-						<p>You may place the shortcodes in pages, posts, and/or widgets.</p>
-
-						<h3>Twitter</h3>
-						<p>
-							This is the basic usage it will return the tweets in an unordered list.
-							<pre><code>[twitter_feed]</code></pre>
-						</p>
-
-						<p>
-							The Twitter shortcode has one option, <strong>count</strong>.
-							<pre><code>[twitter_feed count="2"]</code></pre>
-							The count number must be less than the global twitter count you have set on the twitter tab.
-						</p>
-
-						<h3>Instagram</h3>
-						<p>
-							This is the basic usage it will return the tweets in an unordered list.
-							<pre><code>[instagram_feed]</code></pre>
-						</p>
-
-						<p>
-							The Twitter shortcode has one option, <strong>count</strong>.
-							<pre><code>[instagram_feed count="2"]</code></pre>
-							The count number must be less than the global instagram count you have set on the instagram tab.
-						</p>
-
-						<h2>Using and Creating Skins</h2>
-
-						<p>The default skin is placed in the plugins/simple-events/css/skins/ folder. You may create or add a new skin by simply adding your skin folder to this folder.</p>
-
-						<p>I've included a clean, simple skin called 'Fresh' that you are free to modify for your needs but would back it up since new versions of this plugin will overwrite everything in the simple Events folder.</p>
-						
-					</div>
-					<?php
-					echo 'PLUGIN PATH => ' . SE_PATH . '<br />';
-					var_dump($options);
-					?>			
+			    		<?php
+			    			$text = file_get_contents(SE_PATH . 'README.md');
+								$html = Markdown($text);
+								echo $html;
+							?>
+						</div>	
 		    	</li>
 		    </ul>
 			
@@ -343,14 +320,18 @@ add_action('wp_enqueue_scripts', 'se_plugin_skin_styles');
 /* INCLUDES
 /************************************************************************/
 
-if ( !isset($se_options['google_cal_id']) || empty($se_options['google_cal_id']) ) {
-	require SE_PATH . 'assets/inc/simple-events-custom-post-type.php';
-	require SE_PATH . 'assets/inc/simple-events-metaboxes.php';
-} else {
+if ( isset($se_options['google_cal']) && $se_options['google_cal'] ) {
 	require SE_PATH . 'assets/inc/simple-events-google-calendar-cron.php';
+} else {
+	if ( wp_next_scheduled( 'simple_events_cron' ) ) {
+		wp_clear_scheduled_hook('simple_events_cron');
+	}
 }
+require SE_PATH . 'assets/inc/simple-events-functions.php';
+require SE_PATH . 'assets/inc/simple-events-custom-post-type.php';
+require SE_PATH . 'assets/inc/simple-events-metaboxes.php';
 require SE_PATH . 'assets/inc/simple-events-shortcodes.php';
 require SE_PATH . 'assets/inc/simple-events-widgets.php';
-require SE_PATH . 'assets/inc/simple-events-functions.php';
+
 
 ?>
