@@ -175,7 +175,7 @@ function se_render_form() {
 					    		<label for="se_google_cal_api_key">Google Calendar API Key</label>
 					    	</th>
 					    	<td>
-					    		<input type="text" name="se_options[google_cal_api_key]" value="<?php echo $options['google_cal_api_key']; ?>" id="google_cal_api_key" />
+					    		<input type="text" name="se_options[google_cal_api_key]" value="<?php if ( isset($options['google_cal_api_key']) ) { echo $options['google_cal_api_key']; } ?>" id="google_cal_api_key" />
 							</td>
 						</tr>
 					</table>
@@ -332,6 +332,7 @@ require SE_PATH . 'assets/inc/simple-events-custom-post-type.php';
 require SE_PATH . 'assets/inc/simple-events-metaboxes.php';
 require SE_PATH . 'assets/inc/simple-events-shortcodes.php';
 require SE_PATH . 'assets/inc/simple-events-widgets.php';
+require SE_PATH . 'assets/inc/simple-events-ical-feed.php';
 
 
 ?>

@@ -209,26 +209,26 @@
 		),
 		'strong' => array()
 		);
-	  	// Probably a good idea to make sure your data is set
-	  	if( isset( $_POST['se-start-date'] ) )
-	    	update_post_meta( $post_id, 'se-start-date', wp_kses( $_POST['se-start-date'], $allowed ) );
-		if ( isset( $_POST['se-end-date'] ) && !empty( $_POST['se-end-date'] ) ) {
-			update_post_meta( $post_id, 'se-end-date', wp_kses( $_POST['se-end-date'], $allowed ) );
-		} else {
-			update_post_meta( $post_id, 'se-end-date', wp_kses( $_POST['se-start-date'], $allowed ) );
-		}
-		if( isset( $_POST['se-start-time'] ) )
-			update_post_meta( $post_id, 'se-start-time', wp_kses( $_POST['se-start-time'], $allowed ) );
-		if( isset( $_POST['se-end-time'] ) )
-			update_post_meta( $post_id, 'se-end-time', wp_kses( $_POST['se-end-time'], $allowed ) );
-		if( isset( $_POST['se-location'] ) )
-			update_post_meta( $post_id, 'se-location', wp_kses( $_POST['se-location'], $allowed ) );
-		if( isset( $_POST['se-address'] ) )
-			update_post_meta( $post_id, 'se-address', wp_kses( $_POST['se-address'], $allowed ) );
-		if( isset( $_POST['se-cost'] ) )
-			update_post_meta( $post_id, 'se-cost', wp_kses( $_POST['se-cost'], $allowed ) );
-		if( isset( $_POST['se-description'] ) )
-			update_post_meta( $post_id, 'se-description', wp_kses( $_POST['se-description'], $allowed ) );
+	 //  	// Probably a good idea to make sure your data is set
+	 //  	if( isset( $_POST['se-start-date'] ) )
+	 //    	update_post_meta( $post_id, 'se-start-date', wp_kses( $_POST['se-start-date'], $allowed ) );
+		// if ( isset( $_POST['se-end-date'] ) && !empty( $_POST['se-end-date'] ) ) {
+		// 	update_post_meta( $post_id, 'se-end-date', wp_kses( $_POST['se-end-date'], $allowed ) );
+		// } else {
+		// 	update_post_meta( $post_id, 'se-end-date', wp_kses( $_POST['se-start-date'], $allowed ) );
+		// }
+		// if( isset( $_POST['se-start-time'] ) )
+		// 	update_post_meta( $post_id, 'se-start-time', wp_kses( $_POST['se-start-time'], $allowed ) );
+		// if( isset( $_POST['se-end-time'] ) )
+		// 	update_post_meta( $post_id, 'se-end-time', wp_kses( $_POST['se-end-time'], $allowed ) );
+		// if( isset( $_POST['se-location'] ) )
+		// 	update_post_meta( $post_id, 'se-location', wp_kses( $_POST['se-location'], $allowed ) );
+		// if( isset( $_POST['se-address'] ) )
+		// 	update_post_meta( $post_id, 'se-address', wp_kses( $_POST['se-address'], $allowed ) );
+		// if( isset( $_POST['se-cost'] ) )
+		// 	update_post_meta( $post_id, 'se-cost', wp_kses( $_POST['se-cost'], $allowed ) );
+		// if( isset( $_POST['se-description'] ) )
+		// 	update_post_meta( $post_id, 'se-description', wp_kses( $_POST['se-description'], $allowed ) );
 	}
 
 	/************************************************************************/

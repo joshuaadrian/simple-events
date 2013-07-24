@@ -12,36 +12,40 @@
 
 	function se_post_types() {
 		$labels = array(
-		  'name' => _x('Events', 'post type general name'),
-		  'singular_name' => _x('Event', 'post type singular name'),
-		  'add_new' => _x('Add Event', 'Event'),
-		  'add_new_item' => __('Add Event'),
-		  'edit_item' => __('Edit Event'),
-		  'new_item' => __('New Event'),
-		  'view_item' => __('View Event'),
-		  'search_items' => __('Search Events'),
-		  'not_found' =>  __('No Events found'),
-		  'not_found_in_trash' => __('No Events found in Trash'),
-		  'parent_item_colon' => ''
+			'name' => _x('Events', 'post type general name'),
+			'singular_name' => _x('Event', 'post type singular name'),
+			'add_new' => _x('Add Event', 'Event'),
+			'add_new_item' => __('Add Event'),
+			'edit_item' => __('Edit Event'),
+			'new_item' => __('New Event'),
+			'view_item' => __('View Event'),
+			'search_items' => __('Search Events'),
+			'not_found' =>  __('No Events found'),
+			'not_found_in_trash' => __('No Events found in Trash'),
+			'parent_item_colon' => ''
 		);
 		$args = array(
-		  'labels' => $labels,
-		  'public' => true,
-		  'publicly_queryable' => true,
-		  'show_ui' => true,
-		  'exclude_from_search' => false,
-		  'query_var' => true,
-		  'rewrite' => array( 'slug' => 'event' ),
-		  'capability_type' => 'post',
-		  'hierarchical' => false,
-		  'menu_position' => 20,
-		  'supports' => array('title','thumbnail'),
-	   	  'taxonomies' => array( 'event_types' )
+			'description' => __( 'Place to manage your events' ), /* Custom Type Description */
+			'labels' => $labels,
+			'public' => true,
+			'publicly_queryable' => true,
+			'exclude_from_search' => false,
+			'show_ui' => true,
+			'query_var' => true,
+			'menu_position' => 30, /* this is what order you want it to appear in on the left hand side menu */ 
+			'menu_icon' => SE_URL_PATH . '/assets/img/cpt/events-icon.png', /* the icon for the custom post type menu */
+			'rewrite'	=> array( 'slug' => 'events' ), /* you can specify its url slug */
+			'has_archive' => 'events', /* you can rename the slug here */
+			'capability_type' => 'post',
+			'hierarchical' => false,
+			'supports' => array( 'title','thumbnail' )
 		);
 		register_post_type('se_events',$args);
 	}
 
 	add_action( 'init', 'se_post_types' );
+
+
 
 	/************************************************************************/
 	/* CUSTOM POST TYPE COLUMN
@@ -67,9 +71,9 @@
 	}  
 	function se_columns_content_only_events($column_name, $post_ID) {  
 	    if ($column_name == 'event_start_date_col') {  
-	        echo get_post_meta($post_ID, 'se-start-date', true); 
+	        echo get_post_meta($post_ID, '_se_event_start_datetime', true); 
 	    }
 	    if ($column_name == 'event_start_time_col') {  
-	        echo get_post_meta($post_ID, 'se-start-time', true);  
+	        echo get_post_meta($post_ID, '_se_event_end_datetime', true);  
 	    }
 	}

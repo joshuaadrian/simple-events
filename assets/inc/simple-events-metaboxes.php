@@ -109,4 +109,5 @@ function simple_groups_metaboxes( array $meta_boxes ) {
 }
 
 add_filter( 'cmb_meta_boxes', 'simple_groups_metaboxes' );
+
 ?>

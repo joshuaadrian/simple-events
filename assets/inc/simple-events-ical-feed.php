@@ -1,5 +1,5 @@
 <?php
-function tf_events_ical() {
+function se_events_ical() {
 
 // - start collecting output -
 ob_start();
@@ -20,75 +20,81 @@ CALSCALE:GREGORIAN
 
 <?php
 
-// - grab date barrier -
-$today6am = strtotime('today 6:00') + ( get_option( 'gmt_offset' ) * 3600 );
-$limit = get_option('pubforce_rss_limit');
+$compare = array(
+    array(
+        'key'     => '_se_event_start_datetime',
+        'value'   => time(),
+        'compare' => '>=',
+        'type'    => 'NUMERIC'
+    )
+);
 
-// - query -
-global $wpdb;
-$querystr = "
-    SELECT *
-    FROM $wpdb->posts wposts, $wpdb->postmeta metastart, $wpdb->postmeta metaend
-    WHERE (wposts.ID = metastart.post_id AND wposts.ID = metaend.post_id)
-    AND (metaend.meta_key = 'tf_events_enddate' AND metaend.meta_value > $today6am )
-    AND metastart.meta_key = 'tf_events_enddate'
-    AND wposts.post_type = 'tf_events'
-    AND wposts.post_status = 'publish'
-    ORDER BY metastart.meta_value ASC LIMIT $limit
- ";
+$args = array(
+    'posts_per_page' => $count,
+    'post_type'      => 'se_events',
+    'sort'           => 'post_title',
+    'order'          => 'ASC',
+    'orderby'        => 'meta_value',
+    'meta_key'       => '_se_event_start_datetime',
+    'meta_query'     => $compare
+);
 
-$events = $wpdb->get_results($querystr, OBJECT);
+$se_events = get_posts( $args );
 
 // - loop -
-if ($events):
-global $post;
-foreach ($events as $post):
-setup_postdata($post);
+if ( $se_events ) {
 
-// - custom variables -
-$custom = get_post_custom(get_the_ID());
-$sd = $custom["tf_events_startdate"][0];
-$ed = $custom["tf_events_enddate"][0];
+    global $post;
 
-// - grab gmt for start -
-$gmts = date('Y-m-d H:i:s', $sd);
-$gmts = get_gmt_from_date($gmts); // this function requires Y-m-d H:i:s, hence the back & forth.
-$gmts = strtotime($gmts);
+    foreach ( $se_events as $se_event ) {
 
-// - grab gmt for end -
-$gmte = date('Y-m-d H:i:s', $ed);
-$gmte = get_gmt_from_date($gmte); // this function requires Y-m-d H:i:s, hence the back & forth.
-$gmte = strtotime($gmte);
+        // - custom variables -
+        $meta = get_post_custom( $se_event->ID );
 
-// - Set to UTC ICAL FORMAT -
-$stime = date('Ymd\THis\Z', $gmts);
-$etime = date('Ymd\THis\Z', $gmte);
+        $sd = $meta["_se_event_start_datetime"][0];
+        $ed = $meta["_se_event_end_datetime"][0];
+        $description = isset($meta["_se_event_description"]) ? $meta["_se_event_description"][0] : 'No event description given.';
 
-// - item output -
-?>
-BEGIN:VEVENT
-DTSTART:<?php echo $stime; ?>
-DTEND:<?php echo $etime; ?>
-SUMMARY:<?php echo the_title(); ?>
-DESCRIPTION:<?php the_excerpt_rss('', TRUE, '', 50); ?>
-END:VEVENT
-<?php
-endforeach;
-else :
-endif;
+        // - grab gmt for start -
+        $gmts = date('Y-m-d H:i:s', $sd);
+        $gmts = get_gmt_from_date($gmts); // this function requires Y-m-d H:i:s, hence the back & forth.
+        $gmts = strtotime($gmts);
+
+        // - grab gmt for end -
+        $gmte = date('Y-m-d H:i:s', $ed);
+        $gmte = get_gmt_from_date($gmte); // this function requires Y-m-d H:i:s, hence the back & forth.
+        $gmte = strtotime($gmte);
+
+        // - Set to UTC ICAL FORMAT -
+        $stime = date('Ymd\THis\Z', $gmts);
+        $etime = date('Ymd\THis\Z', $gmte);
+
+        // - item output -
+        ?>
+        BEGIN:VEVENT
+        DTSTART:<?php echo $stime; ?>
+        DTEND:<?php echo $etime; ?>
+        SUMMARY:<?php echo $se_event->post_title; ?>
+        DESCRIPTION:<?php echo $description; ?>
+        END:VEVENT
+        <?php
+    }
+
+}
+
 ?>
 END:VCALENDAR
 <?php
 // - full output -
-$tfeventsical = ob_get_contents();
+$se_events_ical = ob_get_contents();
 ob_end_clean();
-echo $tfeventsical;
+echo $se_events_ical;
 }
 
-function add_tf_events_ical_feed () {
+function add_se_events_ical_feed() {
     // - add it to WP RSS feeds -
-    add_feed('tf-events-ical', 'tf_events_ical');
+    add_feed('se-events-ical', 'se_events_ical');
 }
 
-add_action('init','add_tf_events_ical_feed');
+add_action('init','add_se_events_ical_feed');
 ?>
