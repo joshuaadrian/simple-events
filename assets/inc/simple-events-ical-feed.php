@@ -12,10 +12,10 @@ header('Content-Disposition: attachment; filename="ical.ics"');
 ?>
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//<?php the_title(); ?>//NONSGML Events //EN
-X-WR-CALNAME:<?php the_title(); _e(' - Events','themeforce'); ?>
-X-ORIGINAL-URL:<?php echo the_permalink(); ?>
-X-WR-CALDESC:<?php the_title(); _e(' - Events','themeforce'); ?>
+PRODID:-//<?php bloginfo('name'); ?>//NONSGML Events //EN
+X-WR-CALNAME:<?php bloginfo('name'); echo ' - Events'; ?>
+X-ORIGINAL-URL:<?php bloginfo('url'); ?>
+X-WR-CALDESC:<?php bloginfo('name'); echo ' - Events'; ?>
 CALSCALE:GREGORIAN
 
 <?php
