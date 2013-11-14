@@ -10,6 +10,28 @@ Author URI: http://joshuaadrian.com
 */
 
 /************************************************************************/
+/* ERROR LOGGING
+/************************************************************************/
+
+/**
+ *  Simple logging function that outputs to debug.log if enabled
+ *  _log('Testing the error message logging');
+ *	_log(array('it' => 'works'));
+ */
+
+if (!function_exists('_log')) {
+  function _log( $message ) {
+    if( WP_DEBUG === true ){
+      if( is_array( $message ) || is_object( $message ) ){
+        error_log( print_r( $message, true ) );
+      } else {
+        error_log( $message );
+      }
+    }
+  }
+}
+
+/************************************************************************/
 /* DEFINE PLUGIN ID AND NICK
 /************************************************************************/
 $se_data;
@@ -30,7 +52,7 @@ add_action( 'admin_init', 'se_init' );
 // ADD LINK TO ADMIN
 add_action( 'admin_menu', 'se_add_options_page' );
 // ADD LINK TO ADMIN
-add_filter( 'plugin_action_links', 'se_plugin_action_links', 10, 2 );
+add_filter('plugin_action_links', 'se_plugin_action_links', 10, 2 );
 // GET PLUGIN DATA
 if ( !function_exists( 'get_plugins' ) ) {
     require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
@@ -270,10 +292,9 @@ function se_validate_options($input) {
 /************************************************************************/
 
 function se_plugin_action_links( $links, $file ) {
-	$tmp_id = SE_PLUGINOPTIONS_ID . '/index.php';
-	if ($file == $tmp_id) {
-		$se_links = '<a href="'.get_admin_url().'options-general.php?page='.SE_PLUGINOPTIONS_ID.'">'.__('Settings').'</a>';
-		// make the 'Settings' link appear first
+	$tmp_id = SE_PLUGINOPTIONS_ID . '/simple-events.php';
+	if ( $file == $tmp_id ) {
+		$se_links = '<a href="' . get_admin_url() . 'options-general.php?page=' . SE_PLUGINOPTIONS_ID . '">' . __('Settings') . '</a>';
 		array_unshift( $links, $se_links );
 	}
 	return $links;
@@ -327,12 +348,12 @@ if ( isset($se_options['google_cal']) && $se_options['google_cal'] ) {
 		wp_clear_scheduled_hook('simple_events_cron');
 	}
 }
+
 require SE_PATH . 'assets/inc/simple-events-functions.php';
 require SE_PATH . 'assets/inc/simple-events-custom-post-type.php';
 require SE_PATH . 'assets/inc/simple-events-metaboxes.php';
 require SE_PATH . 'assets/inc/simple-events-shortcodes.php';
 require SE_PATH . 'assets/inc/simple-events-widgets.php';
 require SE_PATH . 'assets/inc/simple-events-ical-feed.php';
-
 
 ?>
