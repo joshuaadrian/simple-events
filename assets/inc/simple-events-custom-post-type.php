@@ -71,9 +71,9 @@
 	}  
 	function se_columns_content_only_events($column_name, $post_ID) {  
 	    if ($column_name == 'event_start_date_col') {  
-	        echo get_post_meta($post_ID, '_se_event_start_datetime', true); 
+	      echo date( 'F jS, Y - g:i a', get_post_meta($post_ID, '_se_event_start_datetime', true) ); 
 	    }
 	    if ($column_name == 'event_start_time_col') {  
-	        echo get_post_meta($post_ID, '_se_event_end_datetime', true);  
+	      echo date( 'F jS, Y - g:i a', get_post_meta($post_ID, '_se_event_end_datetime', true) );  
 	    }
 	}

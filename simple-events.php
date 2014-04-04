@@ -34,9 +34,8 @@ if (!function_exists('_log')) {
 /************************************************************************/
 /* DEFINE PLUGIN ID AND NICK
 /************************************************************************/
-$se_data;
 // DEFINE PLUGIN BASE
-define( 'SE_PATH', plugin_dir_path(__FILE__) );
+define( 'SE_PATH', plugin_dir_path( __FILE__ ) );
 // DEFINE PLUGIN URL
 define( 'SE_URL_PATH', plugins_url() . '/simple-events');
 // DEFINE PLUGIN ID
@@ -53,18 +52,21 @@ add_action( 'admin_init', 'se_init' );
 add_action( 'admin_menu', 'se_add_options_page' );
 // ADD LINK TO ADMIN
 add_filter('plugin_action_links', 'se_plugin_action_links', 10, 2 );
-// GET PLUGIN DATA
-if ( !function_exists( 'get_plugins' ) ) {
-    require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-}
-if ( is_admin() ) {
-  $se_data = get_plugin_data( SE_PATH . plugin_basename( dirname( __FILE__ ) ) . '.php', false, false );
-}
 // PLUGIN OPTIONS
 $se_options = get_option('se_options');
-// LOAD CLASSES
-if ( !function_exists('markdown') ) {
-	require_once SE_PATH . 'assets/inc/libs/php-markdown/markdown.php';
+// GET PLUGIN DATA
+if ( is_admin() ) {
+
+	if ( !function_exists( 'get_plugins' ) ) {
+    require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+	}
+
+  $se_data = get_plugin_data( SE_PATH . plugin_basename( dirname( __FILE__ ) ) . '.php', false, false );
+
+  if ( !function_exists('markdown') ) {
+		require_once SE_PATH . 'assets/inc/libs/php-markdown/markdown.php';
+	}
+
 }
 
 /************************************************************************/
@@ -97,10 +99,14 @@ function se_delete_plugin_options() {
 
 // Define default option settings
 function se_add_defaults() {
-	$tmp = get_option('se_options');
-    if(($tmp['chk_default_options_db']=='1')||(!is_array($tmp))) {
-		delete_option('se_options'); // so we don't have to reset all the 'off' checkboxes too! (don't think this is needed but leave for now)
-		$arr = array(
+
+	global $se_options;
+
+  if ( !$se_options || !is_array( $se_options ) ) {
+		
+		delete_option('se_options');
+		
+		$defaults = array(
 			"google_cal"         => "",
 			"google_cal_id"      => "",
 			"google_cal_api_key" => "",
@@ -108,8 +114,11 @@ function se_add_defaults() {
 			"cal_view"           => "list",
 			"time_zone"          => "America/Chicago"
 		);
-		update_option('se_options', $arr);
+		
+		update_option( 'se_options', $defaults );
+	
 	}
+
 }
 
 // ------------------------------------------------------------------------------
@@ -134,7 +143,7 @@ function se_init() {
 
 // Add menu page
 function se_add_options_page() {
-	add_options_page( 'Simple Events', '<img class="menu_se" src="' . plugins_url( 'assets/img/simple-events.gif' , __FILE__ ) . '" alt="" />'.SE_PLUGINOPTIONS_NICK, 'manage_options', SE_PLUGINOPTIONS_ID, 'se_render_form' );
+	add_options_page( 'Simple Events', SE_PLUGINOPTIONS_NICK, 'manage_options', SE_PLUGINOPTIONS_ID, 'se_render_form' );
 }
 
 // ------------------------------------------------------------------------------
@@ -147,134 +156,198 @@ function se_add_options_page() {
 
 // Render the Plugin options form
 function se_render_form() {
-	global $se_data;
-	
-	?>
-	
-	<div class="wrap">
 
-	    <?php screen_icon(); ?>
+	global $se_options, $se_data; ?>
 
-		    <h2>Simple Events Settings</h2>
+	<div id="se-options" class="wrap">
 
-		    <ul class="se_pagination group">
-		    	<li id="se-pagination-settings" class="se-active">
-		    		<a href="#se-settings">Settings</a>
-		    	</li>
-		    	<li id="se-pagination-help">
-		    		<a href="#se-help">Wiki</a>
-		    	</li>
-		    </ul>
-		    <form action="options.php" method="post" id="<?php echo SE_PLUGINOPTIONS_ID; ?>-options-form" name="<?php echo SE_PLUGINOPTIONS_ID; ?>-options-form">
+		<?php $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'google_calendar_settings_options'; ?>
+        
+		<h2 class="nav-tab-wrapper">
+			<a href="?page=simple-events&tab=google_calendar_settings_options" class="nav-tab <?php echo $active_tab == 'google_calendar_settings_options' ? 'nav-tab-active' : ''; ?>">Google Calendar Settings</a> 
+		  <a href="?page=simple-events&tab=settings_options" class="nav-tab <?php echo $active_tab == 'settings_options' ? 'nav-tab-active' : ''; ?>">Settings</a>
+		  <a href="?page=simple-events&tab=wiki_options" class="nav-tab <?php echo $active_tab == 'wiki_options' ? 'nav-tab-active' : ''; ?>">Wiki</a>  
+		</h2>
 
-	    	<?php
-				settings_fields('se_plugin_options');
-				$options = get_option('se_options');
+		<?php if ( $active_tab == 'google_calendar_settings_options' ) : ?>
+
+    <div class="se-options-section">
+
+	    <form action="options.php" method="post" id="<?php echo SE_PLUGINOPTIONS_ID; ?>-options-form" name="<?php echo SE_PLUGINOPTIONS_ID; ?>-options-form">
+
+	    	<?php settings_fields('se_plugin_options'); ?>
+
+    		<table class="form-table">
+					
+					<tr>
+
+						<th>
+				    	<label for="se_google_cal_id">Enable Google Calendar API</label>
+				    </th>
+
+				    <td>
+				    	<input type="checkbox" id="google_cal" name="se_options[google_cal]" value="1" <?php if ( isset($se_options['google_cal']) ) { checked( $se_options['google_cal'], 1 ); } ?> />
+						</td>
+
+					</tr>
+
+					<tr>
+
+						<th>
+				    	<label for="se_google_cal_id">Google Calendar ID</label>
+				    </th>
+				    
+				    <td>
+				    	<input type="text" name="se_options[google_cal_id]" value="<?php echo $se_options['google_cal_id']; ?>" id="google_cal_id" />
+						</td>
+
+					</tr>
+
+					<tr>
+						
+						<th>
+				    	<label for="se_google_cal_api_key">Google Calendar API Key</label>
+				    </th>
+				    
+				    <td>
+				    	<input type="text" name="se_options[google_cal_api_key]" value="<?php if ( isset($se_options['google_cal_api_key']) ) { echo $se_options['google_cal_api_key']; } ?>" id="google_cal_api_key" />
+						</td>
+
+					</tr>
+
+				</table>
+
+				<div class="se-form-action">
+          <p><input name="Submit" type="submit" value="<?php esc_attr_e('Update Settings'); ?>" class="button-primary" /></p>
+        </div>
+
+			</form>
+
+		</div>
+
+    <?php endif; ?>
+
+		<?php if ( $active_tab == 'settings_options' ) : ?>
+
+		<div class="se-options-section">
+
+			<form action="options.php" method="post" id="<?php echo SE_PLUGINOPTIONS_ID; ?>-options-form" name="<?php echo SE_PLUGINOPTIONS_ID; ?>-options-form">
+
+	    	<?php settings_fields('se_plugin_options'); ?>
+
+			  <table class="form-table">
+					
+					<tr>
+
+						<th>
+						  <label for="se_skin">Skin</label>
+						</th>
+						
+						<td>
+							<select name='se_options[skin]'>
+								<option value='none' <?php selected('none', $se_options['skin']); ?>>&mdash; None &mdash;</option>
+								<?php
+								if ($handle = opendir(SE_PATH . 'assets/css/skins')) {
+								    while (false !== ($entry = readdir($handle))) {
+								    	if ($entry != "." && $entry != "..") { ?>
+								        	<option value='<?php echo $entry; ?>' <?php selected($entry, $se_options['skin']); ?>><?php echo ucfirst($entry); ?></option>
+								    	<?php }
+								    }
+								    closedir($handle);
+								}
+								?>
+							</select>
+						</td>
+
+					</tr>
+					
+					<tr>
+						
+						<th>
+						  <label for="se_cal_view">Calendar View</label>
+						</th>
+						
+						<td>
+							
+							<select id="se_cal_view" name='se_options[cal_view]'>
+							  <option value='list' <?php selected('list', $se_options['cal_view']); ?>>List</option>
+							  <option value='calendar' <?php selected('calendar', $se_options['cal_view']); ?>>Calendar</option>
+							</select>
+						
+						</td>
+
+					</tr>
+					
+					<tr>
+						
+						<th>
+						  <label for="se_time_zone">Time Zone</label>
+						</th>
+						
+						<td>
+							<select id="se_time_zone" name='se_options[time_zone]'>
+								<option value='none' <?php selected('none', $se_options['time_zone']); ?>>&mdash; None &mdash;</option>
+			        	<option value='America/Puerto_Rico' <?php selected('America/Puerto_Rico', $se_options['time_zone']); ?>>AST</option>
+			        	<option value='America/New_York' <?php selected('America/New_York', $se_options['time_zone']); ?>>EDT</option>
+			        	<option value='America/Chicago' <?php selected('America/Chicago', $se_options['time_zone']); ?>>CDT</option>
+			        	<option value='America/Boise' <?php selected('America/Boise', $se_options['time_zone']); ?>>MDT</option>
+			        	<option value='America/Phoenix' <?php selected('America/Phoenix', $se_options['time_zone']); ?>>MST</option>
+			        	<option value='America/Los_Angeles' <?php selected('America/Los_Angeles', $se_options['time_zone']); ?>>PDT</option>
+			        	<option value='America/Juneau' <?php selected('America/Juneau', $se_options['time_zone']); ?>>AKDT</option>
+			        	<option value='Pacific/Honolulu' <?php selected('Pacific/Honolulu', $se_options['time_zone']); ?>>HST</option>
+			        	<option value='Pacific/Guam' <?php selected('Pacific/Guam', $se_options['time_zone']); ?>>ChST</option>
+			        	<option value='Pacific/Samoa' <?php selected('Pacific/Samoa', $se_options['time_zone']); ?>>SST</option>
+			        	<option value='Pacific/Wake' <?php selected('Pacific/Wake', $se_options['time_zone']); ?>>WAKT</option>
+							</select>
+						</td>
+
+					</tr>
+						
+				</table>
+			
+				<div class="se-form-action">
+	        <p><input name="Submit" type="submit" value="<?php esc_attr_e('Update Settings'); ?>" class="button-primary" /></p>
+	      </div>
+
+			</form>
+
+		</div>
+
+		<?php endif; ?>
+
+		<?php if ( $active_tab == 'wiki_options' ) : ?>
+
+		<div class="se-options-section">
+
+	  	<div class="se-copy">
+
+	  	<?php
+
+    		$text = file_get_contents( SE_PATH . 'README.md' );
+
+    		if ( $text ) {
+					$html = Markdown($text);
+					echo $html;
+				} else {
+					echo '<h1>Issue retrieving plugin information</h1>';
+				}
+
 			?>
 
-		    <ul class="se_content">
-		    	<li id="se-settings" class="se-active">
-					<h3>Google Calendar Settings</h3>
-					<table class="form-table">
-						<tr>
-							<th>
-					    		<label for="se_google_cal_id">Enable Google Calendar API</label>
-					    	</th>
-					    	<td>
-					    		<input type="checkbox" id="google_cal" name="se_options[google_cal]" value="1" <?php if ( isset($options['google_cal']) ) { checked( $options['google_cal'], 1 ); } ?> />
-							</td>
-						</tr>
-						<tr>
-							<th>
-					    		<label for="se_google_cal_id">Google Calendar ID</label>
-					    	</th>
-					    	<td>
-					    		<input type="text" name="se_options[google_cal_id]" value="<?php echo $options['google_cal_id']; ?>" id="google_cal_id" />
-							</td>
-						</tr>
-						<tr>
-							<th>
-					    		<label for="se_google_cal_api_key">Google Calendar API Key</label>
-					    	</th>
-					    	<td>
-					    		<input type="text" name="se_options[google_cal_api_key]" value="<?php if ( isset($options['google_cal_api_key']) ) { echo $options['google_cal_api_key']; } ?>" id="google_cal_api_key" />
-							</td>
-						</tr>
-					</table>
-					<h3>Style Settings</h3>
-		    		<table class="form-table">
-				    	<tr>
-							<th>
-					    		<label for="se_skin">Skin</label>
-					    	</th>
-					    	<td>
-								<select name='se_options[skin]'>
-									<option value='none' <?php selected('none', $options['skin']); ?>>&mdash; None &mdash;</option>
-									<?php
-									if ($handle = opendir(SE_PATH . 'assets/css/skins')) {
-									    while (false !== ($entry = readdir($handle))) {
-									    	if ($entry != "." && $entry != "..") { ?>
-									        	<option value='<?php echo $entry; ?>' <?php selected($entry, $options['skin']); ?>><?php echo ucfirst($entry); ?></option>
-									    	<?php }
-									    }
-									    closedir($handle);
-									}
-									?>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<th>
-					    		<label for="se_cal_view">Calendar View</label>
-					    	</th>
-					    	<td>
-								<select id="se_cal_view" name='se_options[cal_view]'>
-						        	<option value='list' <?php selected('list', $options['cal_view']); ?>>List</option>
-						        	<option value='calendar' <?php selected('calendar', $options['cal_view']); ?>>Calendar</option>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<th>
-					    		<label for="se_time_zone">Time Zone</label>
-					    	</th>
-					    	<td>
-								<select id="se_time_zone" name='se_options[time_zone]'>
-									<option value='none' <?php selected('none', $options['time_zone']); ?>>&mdash; None &mdash;</option>
-						        	<option value='America/Puerto_Rico' <?php selected('America/Puerto_Rico', $options['time_zone']); ?>>AST</option>
-						        	<option value='America/New_York' <?php selected('America/New_York', $options['time_zone']); ?>>EDT</option>
-						        	<option value='America/Chicago' <?php selected('America/Chicago', $options['time_zone']); ?>>CDT</option>
-						        	<option value='America/Boise' <?php selected('America/Boise', $options['time_zone']); ?>>MDT</option>
-						        	<option value='America/Phoenix' <?php selected('America/Phoenix', $options['time_zone']); ?>>MST</option>
-						        	<option value='America/Los_Angeles' <?php selected('America/Los_Angeles', $options['time_zone']); ?>>PDT</option>
-						        	<option value='America/Juneau' <?php selected('America/Juneau', $options['time_zone']); ?>>AKDT</option>
-						        	<option value='Pacific/Honolulu' <?php selected('Pacific/Honolulu', $options['time_zone']); ?>>HST</option>
-						        	<option value='Pacific/Guam' <?php selected('Pacific/Guam', $options['time_zone']); ?>>ChST</option>
-						        	<option value='Pacific/Samoa' <?php selected('Pacific/Samoa', $options['time_zone']); ?>>SST</option>
-						        	<option value='Pacific/Wake' <?php selected('Pacific/Wake', $options['time_zone']); ?>>WAKT</option>
-								</select>
-							</td>
-						</tr>
-					</table>
-		    	</li>
-		    	<li id="se-help">
-		    		<div class="se-copy">
-			    		<?php
-			    			$text = file_get_contents(SE_PATH . 'README.md');
-								$html = Markdown($text);
-								echo $html;
-							?>
-						</div>	
-		    	</li>
-		    </ul>
-			
-		    <p class="submit"><input name="Submit" type="submit" value="<?php esc_attr_e('Update Settings'); ?>" class="button-primary" /></p>
-		</form>
-		<div class="credits">
-			<p><?php echo $se_data['Name']; ?> Plugin | Version <?php echo $se_data['Version']; ?> | <a href="<?php echo $se_data['PluginURI']; ?>">Plugin Website</a> | Author <a href="<?php echo $se_data['AuthorURI']; ?>"><?php echo $se_data['Author']; ?></a> | <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="position:relative; top:3px; margin-left:3px"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><a href="http://joshuaadrian.com" target="_blank" class="alignright"><img src="<?php echo plugins_url( 'assets/img/ja-logo.gif' , __FILE__ ); ?>" alt="Joshua Adrian" /></a></p>
+			</div>		
+
 		</div>
+
+		<?php endif; ?>
+
+		<div class="credits">
+			<p><?php echo $se_data['Name']; ?> Plugin | Version <?php echo $se_data['Version']; ?> | <a href="<?php echo $se_data['PluginURI']; ?>">Plugin Website</a> | Author <a href="<?php echo $se_data['AuthorURI']; ?>"><?php echo $se_data['Author']; ?></a> | <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="position:relative; top:3px; margin-left:3px"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><a href="http://joshuaadrian.com" target="_blank" class="alignright"><img src="<?php echo plugins_url( 'assets/img/ja-logo.png' , __FILE__ ); ?>" alt="Joshua Adrian" /></a></p>
+		</div>
+
 	</div>
+
 <?php
+
 }
 
 /************************************************************************/
@@ -304,35 +377,37 @@ function se_plugin_action_links( $links, $file ) {
 /* IMPORT CSS AND JAVASCRIPT STYLES
 /************************************************************************/
 function se_plugin_enqueue() {
-	wp_enqueue_style('simple_events_admin_css', plugins_url('/assets/css/simple-events-admin.css', __FILE__), false, '1.0.0');
-	wp_enqueue_script('simple_events_admin_js', plugins_url('/assets/js/simple-events-admin.min.js', __FILE__), array('jquery'), '1.0.0', true);
+	wp_enqueue_style( 'simple_events_admin_css', plugins_url('/assets/css/simple-events-admin.css', __FILE__), false, '1.0.0' );
+	wp_enqueue_script( 'simple_events_admin_js', plugins_url('/assets/js/simple-events.min.js', __FILE__), array('jquery'), '1.0.0', true );
 }
 
-add_action('admin_enqueue_scripts', 'se_plugin_enqueue');
+add_action( 'admin_enqueue_scripts', 'se_plugin_enqueue' );
 
 function se_plugin_skin_styles() {
-	$skin = get_option('se_options');
-	$skin = $skin['skin'];
-	$skin_json = json_decode(file_get_contents(SE_PATH . 'assets/css/skins/'.$skin.'/'.$skin.'.json'));
+
+	global $se_options;
 
 	wp_enqueue_style('simple_events_admin_css', plugins_url('/assets/css/simple-events.css', __FILE__), false, '1.0.0');
 	wp_enqueue_script('simple_events_js', plugins_url('/assets/js/simple-events.min.js', __FILE__), array('jquery', 'jquery_ui'), '1.0.0', true);
 
-	if ( $skin != 'none' && $skin_json ) {
+	if ( isset( $se_options['skin'] ) && $se_options['skin'] != 'none' && $skin_json ) {
+
+		$skin_json = json_decode( file_get_contents( SE_PATH . 'assets/css/skins/' . $se_options['skin'] . '/' . $se_options['skin'] . '.json' ) );
 
 		$dependencies = array();
 
 		if ($skin_json->css) {
-			wp_enqueue_style('se-skin-default', plugins_url('/assets/css/skins/'.$skin.'/'.$skin.'.css', __FILE__), false, '1.0.0');
+			wp_enqueue_style('se-skin-default', plugins_url('/assets/css/skins/'.$se_options['skin'].'/'.$se_options['skin'].'.css', __FILE__), false, '1.0.0');
 		}
 		if ($skin_json->js_dependencies) {
 			array_push($dependencies, $skin_json->js_dependencies);
 		}
 		if ($skin_json->js) {
-			wp_enqueue_script('se-skin-default', plugins_url('/assets/css/skins/'.$skin.'/'.$skin.'.min.js', __FILE__), $dependencies, '1.0.0', true);
+			wp_enqueue_script('se-skin-default', plugins_url('/assets/css/skins/'.$se_options['skin'].'/'.$se_options['skin'].'.min.js', __FILE__), $dependencies, '1.0.0', true);
 		}
 		
 	}
+
 }
 
 add_action('wp_enqueue_scripts', 'se_plugin_skin_styles');
@@ -341,12 +416,18 @@ add_action('wp_enqueue_scripts', 'se_plugin_skin_styles');
 /* INCLUDES
 /************************************************************************/
 
-if ( isset($se_options['google_cal']) && $se_options['google_cal'] ) {
+if ( isset( $se_options['google_cal'] ) && $se_options['google_cal'] ) {
+	
 	require SE_PATH . 'assets/inc/simple-events-google-calendar-cron.php';
+
 } else {
+
 	if ( wp_next_scheduled( 'simple_events_cron' ) ) {
+		
 		wp_clear_scheduled_hook('simple_events_cron');
+	
 	}
+
 }
 
 require SE_PATH . 'assets/inc/simple-events-functions.php';
