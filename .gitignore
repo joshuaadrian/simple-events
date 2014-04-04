@@ -1,7 +1,5 @@
-.sass-cache
+*.DS_Store
 node_modules
-assets/.DS_Store
-.DS_Store
-assets/img/.DS_Store
-assets/css/.DS_Store
-assets/js/.DS_Store
+.DS_STORE
+assets/.DS_STORE
+.sass-cache
